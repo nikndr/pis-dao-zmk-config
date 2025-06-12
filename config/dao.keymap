@@ -15,7 +15,11 @@
 
 &lt { quick_tap_ms = <200>; };
 
-&mt { quick_tap_ms = <200>; };
+&mt {
+    quick_tap_ms = <200>;
+    quick-tap-ms = <150>;
+    flavor = "balanced";
+};
 
 / {
     chosen {
