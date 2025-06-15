@@ -15,6 +15,10 @@
 
 &lt { quick_tap_ms = <200>; };
 
+&sk {
+    release-after-ms = <2000>;  
+};
+
 / {
     chosen {
         zmk,physical_layout = &dao_crkbd_layout;
@@ -45,18 +49,8 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_SHIFT";
             #binding-cells = <0>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <200>;
             bindings = <&sk LSHFT>, <&kp CAPS>;
-        };
-
-        smart_shift: smart_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SMART_SHIFT";
-            #binding-cells = <2>;
-            tapping-term-ms = <130>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&td_shift>;
         };
     };
 
@@ -79,7 +73,7 @@
 &kp TAB        &kp Q         &kp W        &kp E         &kp R         &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P            &kp LBKT
 &kp ESCAPE     &bhm LCTRL A  &bhm LALT S  &bhm LMETA D  &bhm LSHFT F  &kp G        &kp H      &bhm RSHFT J  &bhm RMETA K  &bhm RALT L  &bhm RCTRL SEMI  &kp SQT
 &kp BACKSLASH  &kp Z         &kp X        &kp C         &kp V         &kp B        &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH         &kp RIGHT_BRACKET
-                                          &trans        &smart_shift LSHFT 0     &lt 1 SPACE  &lt 2 RET  &kp BSPC      &trans
+                                          &trans        &td_shift     &lt 1 SPACE  &lt 2 RET  &kp BSPC      &trans
             >;
         };
 
