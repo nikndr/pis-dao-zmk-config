@@ -36,6 +36,38 @@
             label = "SWITCH_TO_LAYER";
             #binding-cells = <1>;
         };
+
+        td_j: tap_dance_j {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_J";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt RSHFT J>, <&kp J>;
+        };
+
+        td_k: tap_dance_k {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_K";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt RMETA K>, <&kp K>;
+        };
+
+        td_l: tap_dance_l {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_L";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt RALT L>, <&kp L>;
+        };
+
+        td_semi: tap_dance_semi {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_SEMI";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt RCTRL SEMI>, <&kp SEMI>;
+        };
     };
 
     keymap {
@@ -45,7 +77,7 @@
             display-name = "MAIN";
             bindings = <
 &kp TAB        &kp Q        &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P           &kp LBKT
-&kp ESCAPE     &mt LCTRL A  &mt LALT S  &mt LMETA D  &mt LSHFT F  &kp G        &kp H      &mt RSHFT J  &mt RMETA K  &mt RALT L  &mt RCTRL SEMI  &kp SQT
+&kp ESCAPE     &mt LCTRL A  &mt LALT S  &mt LMETA D  &mt LSHFT F  &kp G        &kp H      &td_j        &td_k        &td_l       &td_semi        &kp SQT
 &kp BACKSLASH  &kp Z        &kp X       &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH        &kp RIGHT_BRACKET
                                         &trans       &kp RSHFT    &lt 1 SPACE  &lt 2 RET  &kp BSPC     &trans
             >;
