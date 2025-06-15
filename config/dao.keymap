@@ -30,46 +30,54 @@
 };
 
 / {
+    behaviors {
+        stl: switch_to_layer {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "SWITCH_TO_LAYER";
+            #binding-cells = <1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base {
             display-name = "MAIN";
             bindings = <
-&kp TAB     &kp Q        &kp W       &kp E        &kp R        &kp T        &kp Y  &kp U        &kp I        &kp O       &kp P              &kp LBKT
-&kp ESCAPE  &mt LCTRL A  &mt LALT S  &mt LMETA D  &mt LSHFT F  &kp G        &kp H  &mt RSHFT J  &mt RMETA K  &mt RALT L  &mt RCTRL SEMI     &kp SQT
-&kp GRAVE   &kp Z        &kp X       &kp C        &kp V        &kp B        &kp N  &kp M        &kp COMMA    &kp DOT     &kp RIGHT_BRACKET  &kp BACKSLASH
-                                     &lt RSE TAB  &kp SPACE    &lt LWR RET  &none  &kp BSPC     &none
+&kp TAB        &kp Q        &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P           &kp LBKT
+&kp ESCAPE     &mt LCTRL A  &mt LALT S  &mt LMETA D  &mt LSHFT F  &kp G        &kp H      &mt RSHFT J  &mt RMETA K  &mt RALT L  &mt RCTRL SEMI  &kp SQT
+&kp BACKSLASH  &kp Z        &kp X       &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH        &kp RIGHT_BRACKET
+                                        &trans       &kp RSHFT    &lt 1 SPACE  &lt 2 RET  &kp BSPC     &trans
             >;
         };
 
-        lower_layer {
+        characters {
             display-name = "SYM";
             bindings = <
-&kp F12    &kp F1    &kp F2  &kp F3       &kp F4    &kp F5     &kp F6     &kp F7    &kp F8       &kp F9    &kp F10   &kp F11
-&kp EQUAL  &kp N1    &kp N2  &kp N3       &kp N4    &kp N5     &kp N6     &kp N7    &kp N8       &kp N9    &kp N0    &kp MINUS
-&kp PLUS   &kp EXCL  &kp AT  &kp HASH     &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR     &kp LPAR  &kp RPAR  &none
-                                  &lt ADJ TAB  &trans    &trans     &trans     &trans    &lt ADJ DEL
+&kp SINGLE_QUOTE  &kp EXCL   &kp AT         &kp HASH   &kp DOLLAR  &kp PERCENT  &kp CARET       &kp AMPERSAND     &kp ASTRK          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&kp QUESTION      &kp N1     &kp N2         &kp N3     &kp N4      &kp N5       &kp N6          &kp N7            &kp N8             &kp N9                &kp N0                 &kp SLASH
+&kp GRAVE         &kp COLON  &kp SEMICOLON  &kp MINUS  &kp PLUS    &kp EQUAL    &kp UNDERSCORE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE
+                                            &mo 3      &trans      &trans       &trans          &kp DEL           &trans
             >;
         };
 
-        raise_layer {
-            display-name = "NUM";
+        controls {
+            display-name = "SYM";
             bindings = <
-&mt LGUI KP_NUM  &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CLCK
-&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N4  &kp KP_N4  &kp KP_PLUS   &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
-&kp LALT         &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &kp RALT
-                                             &trans     &trans     &lt ADJ RET   &lt ADJ ESC   &trans    &trans
+&trans  &kp F1          &kp F2      &kp F3      &kp F4                &kp F5           &kp F6    &kp F7    &kp F8        &kp F9     &kp F10  &trans
+&trans  &kp C_PREVIOUS  &kp C_NEXT  &kp C_PP    &kp C_BRIGHTNESS_DEC  &kp C_BRI_INC    &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp F11  &trans
+&trans  &none           &none       &kp K_MUTE  &kp C_VOL_DN          &kp C_VOLUME_UP  &none     &kp LEFT  &kp DOWN      &kp RIGHT  &kp F12  &trans
+                                    &mo 3       &trans                &trans           &trans    &trans    &mo 3
             >;
         };
 
-        hardware_layer {
+        hardware {
             display-name = "ADJ";
             bindings = <
-&bootloader  &studio_unlock  &none         &none         &none         &none         &none         &none         &none         &none         &studio_unlock  &bootloader
-&bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &bt BT_CLR
-&sys_reset   &none           &none         &none         &none         &none         &none         &none         &none         &none         &none           &sys_reset
-                                           &trans        &none         &trans        &trans        &none         &trans
+&bootloader  &studio_unlock  &none          &none             &none             &none         &none         &none          &none          &none             &studio_unlock    &bootloader
+&bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1      &bt BT_SEL 0      &bt BT_CLR
+&sys_reset   &kp LESS_THAN   &kp LESS_THAN  &kp GREATER_THAN  &kp GREATER_THAN  &none         &none         &kp LESS_THAN  &kp LESS_THAN  &kp GREATER_THAN  &kp GREATER_THAN  &sys_reset
+                                            &trans            &stl 0            &trans        &trans        &none          &trans
             >;
         };
     };
