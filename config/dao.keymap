@@ -31,8 +31,6 @@
             #binding-cells = <1>;
         };
 
-
-
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -46,7 +44,7 @@
 
     combos {
         compatible = "zmk,combos";
-        
+
         combo_hardware {
             bindings = <&tog 3>;
             key-positions = <5 17 29>; // t g b keys
