@@ -100,18 +100,22 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DQT>;
+            label = "\" character";
+        };
 
         percent: percent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp PRCNT>;
             label = "% character";
-        };at: at {
-        compatible = "zmk,behavior-macro";
-      
-         #binding-cells = <0>;
-         bindings = <&kp AT>;
-         label = "@ character";};
+        };
+
+        at: at {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp AT>;
+            label = "@ character";
+        };
     };
 
     
