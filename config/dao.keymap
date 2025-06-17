@@ -8,6 +8,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+#define HOST_OS 2
+#include "zmk-helpers/helper.h"
+
 #define DEF 0
 #define LWR 1
 #define RSE 2
@@ -27,6 +30,14 @@
         // zmk,physical_layout = &dao_full_layout;
     };
 };
+
+// Convert existing macros to zmk-helpers Unicode definitions
+ZMK_UNICODE_SINGLE(semicolon, N0, N0, N3, B)     // ;
+ZMK_UNICODE_SINGLE(colon, N0, N0, N3, A)         // :
+ZMK_UNICODE_SINGLE(quote, N0, N0, N2, N7)        // '
+ZMK_UNICODE_SINGLE(double_quote, N0, N0, N2, N2) // "
+ZMK_UNICODE_SINGLE(percent, N0, N0, N2, N5)      // %
+ZMK_UNICODE_SINGLE(at, N0, N0, N4, N0)           // @
 
 / {
     behaviors {
@@ -59,7 +70,7 @@
             label = "Q_DQ";
             #binding-cells = <0>;
             tapping-term-ms = <160>;
-            bindings = <&kp SQT>, <&kp DQT>;
+            bindings = <&quote>, <&double_quote>;
         };
     };
 
@@ -99,9 +110,9 @@
         characters {
             display-name = "SYM";
             bindings = <
-&qdq          &kp EXCL    &kp AT    &kp HASH   &kp DOLLAR  &kp PRCNT  &kp CARET       &kp AMPERSAND     &kp ASTRK          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&qdq          &kp EXCL    &at       &kp HASH   &kp DOLLAR  &percent   &kp CARET       &kp AMPERSAND     &kp ASTRK          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
 &kp QUESTION  &kp N1      &kp N2    &kp N3     &kp N4      &kp N5     &kp N6          &kp N7            &kp N8             &kp N9                &kp N0                 &kp SLASH
-&kp GRAVE     &kp SEMI    &kp COLON &kp MINUS  &kp PLUS    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE
+&kp GRAVE     &semicolon  &colon    &kp MINUS  &kp PLUS    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE
                                     &trans     &trans      &trans     &trans          &trans            &trans
             >;
         };
