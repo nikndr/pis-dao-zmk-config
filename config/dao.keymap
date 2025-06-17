@@ -53,6 +53,15 @@
             tapping-term-ms = <200>;
             bindings = <&sk LSHFT>, <&kp CAPS>;
         };
+
+        qdq: qdq {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Single quote on tap, double quote on double tap";
+            #binding-cells = <0>;
+            bindings = <&quote>, <&double_quote>;
+
+            tapping-term-ms = <160>;
+        };
     };
 
     combos {
@@ -62,6 +71,43 @@
             bindings = <&tog 3>;
             key-positions = <5 17 29>; // t g b keys
             layers = <0>;
+        };
+    };
+
+    macros {
+        semicolon: semicolon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>;
+            label = "SEMICOLON";
+        };
+
+        colon: colon {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>;
+            label = "COLON";
+        };
+
+        quote: quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>;
+            label = "' character";
+        };
+
+        double_quote: double_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>;
+            label = "", character";
+        };
+
+        percent: percent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PRCNT>;
+            label = "% character";
         };
     };
 
@@ -91,10 +137,10 @@
         characters {
             display-name = "SYM";
             bindings = <
-&kp SINGLE_QUOTE  &kp EXCL   &kp AT         &kp HASH   &kp DOLLAR  &kp PERCENT  &kp CARET       &kp AMPERSAND     &kp ASTRK          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&kp QUESTION      &kp N1     &kp N2         &kp N3     &kp N4      &kp N5       &kp N6          &kp N7            &kp N8             &kp N9                &kp N0                 &kp SLASH
-&kp GRAVE         &kp COLON  &kp SEMICOLON  &kp MINUS  &kp PLUS    &kp EQUAL    &kp UNDERSCORE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE
-                                            &trans     &trans      &trans       &trans          &trans            &trans
+&qdq          &kp EXCL    &kp AT  &kp HASH   &kp DOLLAR  &percent   &kp CARET       &kp AMPERSAND     &kp ASTRK          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&kp QUESTION  &kp N1      &kp N2  &kp N3     &kp N4      &kp N5     &kp N6          &kp N7            &kp N8             &kp N9                &kp N0                 &kp SLASH
+&kp GRAVE     &semicolon  &colon  &kp MINUS  &kp PLUS    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE
+                                  &trans     &trans      &trans     &trans          &trans            &trans
             >;
         };
 
