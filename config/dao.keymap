@@ -56,7 +56,7 @@
 
         qdq: qdq {
             compatible = "zmk,behavior-tap-dance";
-            label = "Single quote on tap, double quote on double tap";
+            label = "Q_DQ";
             #binding-cells = <0>;
             tapping-term-ms = <160>;
             bindings = <&kp SQT>, <&kp DQT>;
