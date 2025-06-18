@@ -26,6 +26,10 @@
     quick-release;
 };
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
     chosen {
         zmk,physical_layout = &dao_crkbd_layout;
@@ -57,7 +61,7 @@
             label = "TAP_DANCE_SHIFT";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sk LSHFT>, <&kp CAPS>;
+            bindings = <&sk LSHFT>, <&caps_word>;
         };
 
         qdq: qdq {
