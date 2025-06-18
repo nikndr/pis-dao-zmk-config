@@ -11,6 +11,7 @@
 #define HOST_OS 2
 #include "zmk-helpers/helper.h"
 #include "ukrainian.dtsi"
+#include "unicode.dtsi"
 
 #define DEF 0
 #define UKR 1
@@ -32,14 +33,6 @@
         // zmk,physical_layout = &dao_full_layout;
     };
 };
-
-// Convert existing macros to zmk-helpers Unicode definitions
-ZMK_UNICODE_SINGLE(semicolon, N0, N0, N3, B)     // ;
-ZMK_UNICODE_SINGLE(colon, N0, N0, N3, A)         // :
-ZMK_UNICODE_SINGLE(quote, N0, N0, N2, N7)        // '
-ZMK_UNICODE_SINGLE(double_quote, N0, N0, N2, N2) // "
-ZMK_UNICODE_SINGLE(percent, N0, N0, N2, N5)      // %
-ZMK_UNICODE_SINGLE(at, N0, N0, N4, N0)           // @
 
 / {
     behaviors {
@@ -117,7 +110,7 @@ ZMK_UNICODE_SINGLE(at, N0, N0, N4, N0)           // @
 &uk_g           &uk_i_short  &uk_ts  &uk_u  &uk_k  &uk_e        &uk_n     &uk_h    &uk_sh   &uk_sch  &uk_z    &uk_kh
 &uk_yi          &uk_f        &uk_i   &uk_v  &uk_a  &uk_p        &uk_r     &uk_o    &uk_l    &uk_d    &uk_zh   &uk_ie
 &uk_apostrophe  &uk_ya       &uk_ch  &uk_s  &uk_m  &uk_y        &uk_t     &uk_soft &uk_b    &uk_yu   &uk_dot  &uk_question
-                                     &kp TAB &td_shift &lt 2 SPACE &lt 3 RET &kp BSPC &kp ESCAPE
+                                     &kp TAB &td_shift &lt 2 SPACE &lt 3 RET &kp BSPC &lt 0 ESCAPE
             >;
         };
 
