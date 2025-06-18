@@ -13,10 +13,10 @@
 #include "ukrainian.dtsi"
 
 #define DEF 0
-#define LWR 1
-#define RSE 2
-#define ADJ 3
-#define UKR 4
+#define UKR 1
+#define LWR 2
+#define RSE 3
+#define ADJ 4
 
 &lt { quick_tap_ms = <200>; };
 
@@ -80,21 +80,21 @@ ZMK_UNICODE_SINGLE(at, N0, N0, N4, N0)           // @
         compatible = "zmk,combos";
 
         combo_hardware {
-            bindings = <&tog 3>;
+            bindings = <&tog 4>;
             key-positions = <5 17 29>; // t g b keys
             layers = <0>;
         };
 
         combo_ukrainian {
-            bindings = <&to 4>;
+            bindings = <&to 1>;
             key-positions = <5 6>; // Switch to Ukrainian layer
-            layers = <0>;
+            layers = <0 1>;
         };
 
         combo_base {
             bindings = <&to 0>;
             key-positions = <17 18>; // Return to base layer
-            layers = <4>;
+            layers = <0 1>;
         };
     };
 
@@ -107,7 +107,17 @@ ZMK_UNICODE_SINGLE(at, N0, N0, N4, N0)           // @
 &kp TAB        &kp Q         &kp W        &kp E         &kp R         &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P            &kp LBKT
 &kp ESCAPE     &bhm LCTRL A  &bhm LALT S  &bhm LMETA D  &bhm LSHFT F  &kp G        &kp H      &bhm RSHFT J  &bhm RMETA K  &bhm RALT L  &bhm RCTRL SEMI  &kp SQT
 &kp BACKSLASH  &kp Z         &kp X        &kp C         &kp V         &kp B        &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH         &kp RIGHT_BRACKET
-                                          &kp TAB       &td_shift     &lt 1 SPACE  &lt 2 RET  &kp BSPC      &kp ESCAPE
+                                          &kp TAB       &td_shift     &lt 2 SPACE  &lt 3 RET  &kp BSPC      &kp ESCAPE
+            >;
+        };
+
+        ukrainian {
+            display-name = "UKR";
+            bindings = <
+&uk_g           &uk_i_short  &uk_ts  &uk_u  &uk_k  &uk_e        &uk_n     &uk_h    &uk_sh   &uk_sch  &uk_z    &uk_kh
+&uk_yi          &uk_f        &uk_i   &uk_v  &uk_a  &uk_p        &uk_r     &uk_o    &uk_l    &uk_d    &uk_zh   &uk_ie
+&uk_apostrophe  &uk_ya       &uk_ch  &uk_s  &uk_m  &uk_y        &uk_t     &uk_soft &uk_b    &uk_yu   &kp DOT  &uk_question
+                                     &kp TAB &td_shift &lt 2 SPACE &lt 3 RET &kp BSPC &kp ESCAPE
             >;
         };
 
@@ -138,16 +148,6 @@ ZMK_UNICODE_SINGLE(at, N0, N0, N4, N0)           // @
 &bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1      &bt BT_SEL 0      &bt BT_CLR
 &sys_reset   &kp LESS_THAN   &kp LESS_THAN  &kp GREATER_THAN  &kp GREATER_THAN  &none         &none         &kp LESS_THAN  &kp LESS_THAN  &kp GREATER_THAN  &kp GREATER_THAN  &sys_reset
                                             &trans            &to 0             &to 0         &to 0         &to 0          &trans
-            >;
-        };
-
-        ukrainian {
-            display-name = "UKR";
-            bindings = <
-&uk_g           &uk_i_short  &uk_ts  &uk_u  &uk_k  &uk_e        &uk_n     &uk_h    &uk_sh   &uk_sch  &uk_z    &uk_kh
-&uk_yi          &uk_f        &uk_i   &uk_v  &uk_a  &uk_p        &uk_r     &uk_o    &uk_l    &uk_d    &uk_zh   &uk_ie
-&uk_apostrophe  &uk_ya       &uk_ch  &uk_s  &uk_m  &uk_y        &uk_t     &uk_soft &uk_b    &uk_yu   &kp DOT  &uk_question
-                                     &kp TAB &td_shift &lt 1 SPACE &lt 2 RET &kp BSPC &kp ESCAPE
             >;
         };
     };
