@@ -87,13 +87,13 @@ ZMK_UNICODE_SINGLE(at, N0, N0, N4, N0)           // @
 
         combo_ukrainian {
             bindings = <&to 1>;
-            key-positions = <5 6>; // Switch to Ukrainian layer
+            key-positions = <3 4 7 8>; // Switch to Ukrainian layer - middle and index fingers
             layers = <0 1>;
         };
 
         combo_base {
             bindings = <&to 0>;
-            key-positions = <17 18>; // Return to base layer
+            key-positions = <15 16 19 20>; // Return to base layer - middle and index fingers
             layers = <0 1>;
         };
     };
@@ -115,7 +115,7 @@ ZMK_UNICODE_SINGLE(at, N0, N0, N4, N0)           // @
             display-name = "UKR";
             bindings = <
 &uk_g           &uk_i_short  &uk_ts  &uk_u  &uk_k  &uk_e        &uk_n     &uk_h    &uk_sh   &uk_sch  &uk_z    &uk_kh
-&uk_yi          &bhm LCTRL uk_f  &bhm LALT uk_i  &bhm LMETA uk_v  &bhm LSHFT uk_a  &uk_p        &uk_r     &bhm RSHFT uk_o  &bhm RMETA uk_l  &bhm RALT uk_d  &bhm RCTRL uk_zh  &uk_ie
+&uk_yi          &uk_f        &uk_i   &uk_v  &uk_a  &uk_p        &uk_r     &uk_o    &uk_l    &uk_d    &uk_zh   &uk_ie
 &uk_apostrophe  &uk_ya       &uk_ch  &uk_s  &uk_m  &uk_y        &uk_t     &uk_soft &uk_b    &uk_yu   &uk_dot  &uk_question
                                      &kp TAB &td_shift &lt 2 SPACE &lt 3 RET &kp BSPC &kp ESCAPE
             >;
