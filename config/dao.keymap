@@ -130,7 +130,7 @@
 &uk_g           &uk_i_short  &uk_ts  &uk_u  &uk_k  &uk_e        &uk_n     &uk_h    &uk_sh   &uk_sch  &uk_z    &uk_kh
 &uk_yi          &uk_f        &uk_i   &uk_v  &uk_a  &uk_p        &uk_r     &uk_o    &uk_l    &uk_d    &uk_zh   &uk_ie
 &uk_apostrophe  &uk_ya       &uk_ch  &uk_s  &uk_m  &uk_y        &uk_t     &uk_soft &uk_b    &uk_yu   &uk_dot  &uk_question
-                                     &kp TAB &td_shift &lt 2 SPACE &lt 3 RET &kp BSPC &lt 0 ESCAPE
+                                     &kp TAB &td_shift &lt 2 SPACE &lt 3 RET &kp BSPC &lt 0 ESCAPE // todo doesn't work
             >;
         };
 
@@ -138,7 +138,7 @@
             display-name = "CTL";
             bindings = <
 &kp C_VOLUME_UP  &kp F1          &kp F2      &kp F3     &kp F4                &kp F5         &kp F6                &kp F7      &kp F8        &kp F9                 &kp F10  &trans
-&kp C_VOL_DN     &none           &kp LCTRL   &kp LALT   &kp LMETA             &kp LC(SPACE)  &kp LEFT              &kp DOWN    &kp UP_ARROW  &kp RIGHT              &kp F11  &kp LC(LA(LG(O)))
+&kp C_VOL_DN     &kp LSHFT       &kp LCTRL   &kp LALT   &kp LMETA             &kp LC(SPACE)  &kp LEFT              &kp DOWN    &kp UP_ARROW  &kp RIGHT              &kp F11  &kp LC(LA(LG(O)))
 &kp K_MUTE       &kp C_PREVIOUS  &kp C_NEXT  &kp C_PP   &kp C_BRIGHTNESS_DEC  &kp C_BRI_INC  &kp LG(LEFT_BRACKET)  &none       &none         &kp LG(RIGHT_BRACKET)  &kp F12  &trans
                                              &trans     &trans                &trans         &trans                &kp DELETE  &trans
             >;
