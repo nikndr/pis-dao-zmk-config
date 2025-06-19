@@ -10,14 +10,11 @@
 
 #define HOST_OS 2
 #include "zmk-helpers/helper.h"
-#include "ukrainian.dtsi"
-#include "unicode.dtsi"
 
 #define DEF 0
-#define UKR 1
-#define LWR 2
-#define RSE 3
-#define ADJ 4
+#define LWR 1
+#define RSE 2
+#define ADJ 3
 
 &lt { quick_tap_ms = <200>; };
 
@@ -79,35 +76,15 @@
             tapping-term-ms = <200>;
             bindings = <&sk LSHFT>, <&caps_word>;
         };
-
-        qdq: qdq {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Q_DQ";
-            #binding-cells = <0>;
-            tapping-term-ms = <160>;
-            bindings = <&quote>, <&double_quote>;
-        };
     };
 
     combos {
         compatible = "zmk,combos";
 
         combo_hardware {
-            bindings = <&tog 4>;
+            bindings = <&tog 3>;
             key-positions = <5 17 29>; // t g b keys
             layers = <0>;
-        };
-
-        combo_ukrainian {
-            bindings = <&to 1>;
-            key-positions = <3 4 7 8>; // Switch to Ukrainian layer - middle and index fingers
-            layers = <0 1>;
-        };
-
-        combo_base {
-            bindings = <&to 0>;
-            key-positions = <15 16 19 20>; // Return to base layer - middle and index fingers
-            layers = <0 1>;
         };
     };
 
@@ -120,17 +97,7 @@
 &kp TAB        &kp Q         &kp W        &kp E         &kp R         &kp T        &kp Y      &kp U         &kp I         &kp O        &kp P            &kp LBKT
 &kp ESCAPE     &kp A         &hml LCTRL S  &hml LALT D  &hml LMETA F  &kp G        &kp H      &hmr RMETA J  &hmr RALT K  &hmr RCTRL L  &kp SEMI        &kp SQT
 &kp BACKSLASH  &kp Z         &kp X        &kp C         &kp V         &kp B        &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH         &kp RIGHT_BRACKET
-                                          &kp TAB       &td_shift     &lt 2 SPACE  &lt 3 RET  &kp BSPC      &kp ESCAPE
-            >;
-        };
-
-        ukrainian {
-            display-name = "UKR";
-            bindings = <
-&uk_g           &uk_i_short  &uk_ts  &uk_u  &uk_k  &uk_e        &uk_n     &uk_h    &uk_sh   &uk_sch  &uk_z    &uk_kh
-&uk_yi          &uk_f        &uk_i   &uk_v  &uk_a  &uk_p        &uk_r     &uk_o    &uk_l    &uk_d    &uk_zh   &uk_ie
-&uk_apostrophe  &uk_ya       &uk_ch  &uk_s  &uk_m  &uk_y        &uk_t     &uk_soft &uk_b    &uk_yu   &uk_dot  &uk_question
-                                     &kp TAB &td_shift &lt 2 SPACE &lt 3 RET &kp BSPC &lt 0 ESCAPE // todo doesn't work
+                                          &kp TAB       &td_shift     &lt 1 SPACE  &lt 2 RET  &kp BSPC      &kp ESCAPE
             >;
         };
 
@@ -147,10 +114,10 @@
         characters {
             display-name = "SYM";
             bindings = <
-&qdq          &kp EXCL    &at       &kp HASH   &kp DOLLAR  &percent   &kp CARET       &kp AMPERSAND     &kp ASTRK          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&kp QUESTION  &kp N1      &kp N2    &kp N3     &kp N4      &kp N5     &kp N6          &kp N7            &kp N8             &kp N9                &kp N0                 &kp SLASH
-&kp GRAVE     &semicolon  &colon    &kp MINUS  &kp PLUS    &kp EQUAL  &kp UNDERSCORE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE
-                                    &trans     &trans      &trans     &trans          &trans            &trans
+&kp SQT       &kp EXCL    &kp AT       &kp HASH   &kp DOLLAR  &kp PERCENT   &kp CARET       &kp AMPERSAND     &kp ASTRK          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&kp QUESTION  &kp N1      &kp N2       &kp N3     &kp N4      &kp N5        &kp N6          &kp N7            &kp N8             &kp N9                &kp N0                 &kp SLASH
+&kp GRAVE     &kp SEMI    &kp COLON    &kp MINUS  &kp PLUS    &kp EQUAL     &kp UNDERSCORE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE
+                                       &trans     &trans      &trans        &trans          &trans            &trans
             >;
         };
 
