@@ -104,10 +104,10 @@
         controls {
             display-name = "CTL";
             bindings = <
-&trans  &trans  &kp LS(LG(N5))            &kp LS(LG(NUMBER_1))  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp LG(LEFT_BRACKET)  &kp K_UNDO     &kp K_REDO    &kp LG(RIGHT_BRACKET)  &trans         &trans
-&trans  &trans  &kp K_PREVIOUS            &kp K_NEXT            &kp K_PLAY_PAUSE      &kp K_MUTE         &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &kp LC(SPACE)  &trans
-&trans  &trans  &kp LG(LA(LS(NUMBER_3)))  &kp LS(LG(NUMBER_4))  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp HOME              &kp PAGE_DOWN  &kp PAGE_UP   &kp END                &trans         &trans
-                                          &trans                &trans                &trans             &lt 3 RET             &kp DELETE     &trans
+&trans  &trans  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp LG(LEFT_BRACKET)  &kp K_UNDO     &kp K_REDO    &kp LG(RIGHT_BRACKET)  &trans         &trans
+&trans  &trans  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &kp LC(SPACE)  &trans
+&trans  &trans  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp HOME              &kp PAGE_DOWN  &kp PAGE_UP   &kp END                &trans         &trans
+                           &trans     &trans     &trans     &lt 3 RET             &kp DELETE     &trans
             >;
         };
 
@@ -123,10 +123,10 @@
 
         function {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(LG(N5))            &kp LS(LG(NUMBER_1))  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &kp K_PREVIOUS            &kp K_NEXT            &kp K_PLAY_PAUSE      &kp K_MUTE         &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&trans  &trans  &kp LG(LA(LS(NUMBER_3)))  &kp LG(LS(NUMBER_4))  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+                                          &trans                &trans                &trans             &trans  &trans  &trans
             >;
 
             label = "FCN";
