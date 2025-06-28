@@ -85,6 +85,20 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        sc_part: sc_part {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SC_PART";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(NUMBER_4))>, <&kp LS(LG(NUMBER_5))>;
+        };
+
+        sc_full: sc_full {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SC_FULL";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(NUMBER_1))>, <&kp LS(LA(LG(NUMBER_3)))>;
+        };
     };
 
     combos {
@@ -94,6 +108,15 @@
             bindings = <&tog 4>;
             key-positions = <5 17 29>; // t g b keys
             layers = <0>;
+        };
+    };
+
+    macros {
+        log_hrd_lyr: log_hrd_lyr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(H) &kp LS(A) &kp LS(R) &kp LS(D) &kp LS(W) &kp LS(A) &kp LS(R) &kp LS(E) &kp SPACE &kp LS(L) &kp LS(A) &kp LS(Y) &kp LS(E) &kp LS(R)>;
+            label = "LOG_HRD_LYR";
         };
     };
 
@@ -113,9 +136,9 @@
         controls {
             display-name = "CTL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(Z)      &kp LS(LG(Z))  &kp LG(RIGHT_BRACKET)  &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT              &kp DOWN       &kp UP_ARROW   &kp RIGHT              &kp LC(SPACE)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp HOME              &kp PAGE_DOWN  &kp PAGE_UP    &kp END                &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LEFT_BRACKET)  &kp LG(Z)      &kp LS(LG(Z))  &kp LG(RIGHT_BRACKET)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT              &kp DOWN       &kp UP_ARROW   &kp RIGHT              &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp HOME              &kp PAGE_DOWN  &kp PAGE_UP    &kp END                &trans  &trans
                         &trans  &trans  &trans  &trans                &trans         &trans
             >;
         };
@@ -132,10 +155,10 @@
 
         function {
             bindings = <
-&trans  &trans  &kp LS(LG(N5))            &kp LS(LG(NUMBER_1))  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &kp K_PREVIOUS            &kp K_NEXT            &kp K_PLAY_PAUSE      &kp K_MUTE         &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-&trans  &trans  &kp LG(LA(LS(NUMBER_3)))  &kp LG(LS(NUMBER_4))  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
-                                          &trans                &trans                &trans             &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6                &kp F7             &kp F8           &kp F9            &kp F10  &trans
+&trans  &trans  &trans  &sc_full  &sc_part  &trans  &kp C_BRIGHTNESS_INC  &kp K_PREVIOUS     &kp K_NEXT       &kp K_PLAY_PAUSE  &kp F11  &trans
+&trans  &trans  &trans  &trans    &trans    &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE        &kp F12  &trans
+                        &trans    &trans    &trans  &trans                &trans             &trans
             >;
 
             label = "FCN";
@@ -144,10 +167,10 @@
         hardware {
             display-name = "ADJ";
             bindings = <
-&bootloader  &studio_unlock  &none          &none             &none             &none         &none         &none          &none          &none             &studio_unlock    &bootloader
-&bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1      &bt BT_SEL 0      &bt BT_CLR
-&sys_reset   &kp LESS_THAN   &kp LESS_THAN  &kp GREATER_THAN  &kp GREATER_THAN  &none         &none         &kp LESS_THAN  &kp LESS_THAN  &kp GREATER_THAN  &kp GREATER_THAN  &sys_reset
-                                            &trans            &to 0             &to 0         &to 0         &to 0          &trans
+&bootloader  &studio_unlock  &none         &none         &none         &none         &none         &none         &none         &none         &studio_unlock  &bootloader
+&bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &bt BT_CLR
+&sys_reset   &none           &none         &none         &none         &log_hrd_lyr  &log_hrd_lyr  &none         &none         &none         &none           &sys_reset
+                                           &trans        &to 0         &to 0         &to 0         &to 0         &trans
             >;
         };
     };
