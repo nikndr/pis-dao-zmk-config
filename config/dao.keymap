@@ -121,7 +121,7 @@
             bindings = <&th_hold LC(LA(LEFT_SHIFT)) TAB>, <&kp ESCAPE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RGUI)>;
         };
 
         rme_rctl: rme_rctl {
@@ -157,10 +157,10 @@
         base {
             display-name = "MAIN";
             bindings = <
-&kp GRAVE      &kp Q              &kp W                &kp E                            &kp R             &kp T        &kp Y      &kp U             &kp I            &kp O                &kp P                 &kp LBKT
-&kp RBKT       &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D                  &hml LEFT_META F  &kp G        &kp H      &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
-&kp BACKSLASH  &kp Z              &kp X                &kp C                            &kp V             &kp B        &kp N      &kp M             &kp COMMA        &kp DOT              &kp FSLH              &kp LC(SPACE)
-                                                       &th_hold LA(LC(LEFT_SHIFT)) TAB  &sk LEFT_SHIFT    &lt 1 SPACE  &lt 2 RET  &kp BACKSPACE     &kp RIGHT_META
+&kp GRAVE      &kp Q              &kp W                &kp E            &kp R             &kp T        &kp Y      &kp U             &kp I            &kp O                &kp P                 &kp LBKT
+&kp RBKT       &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F  &kp G        &kp H      &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
+&kp BACKSLASH  &kp Z              &kp X                &kp C            &kp V             &kp B        &kp N      &kp M             &kp COMMA        &kp DOT              &kp FSLH              &kp LC(SPACE)
+                                                       &mt_esc          &sk LEFT_SHIFT    &lt 1 SPACE  &lt 2 RET  &kp BACKSPACE     &kp RIGHT_META
             >;
         };
 
