@@ -137,14 +137,14 @@
             #binding-cells = <0>;
             bindings = <&kp LC(SPACE)>, <&slash_urk>;
 
-            tapping-term-ms = <180>;
+            tapping-term-ms = <220>;
         };
 
         lng_or_at: lng_or_at {
             compatible = "zmk,behavior-tap-dance";
             label = "LNG_OR_AT";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <220>;
             bindings = <&kp LC(SPACE)>, <&at_ukr>;
         };
 
