@@ -160,10 +160,15 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_hardware {
+        hardware_left {
             bindings = <&tog 4>;
-            key-positions = <5 17 29>; // t g b keys
+            key-positions = <5 17 29 37>; // t g b keys
             layers = <0>;
+        };
+
+        hardware_right {
+            bindings = <&tog 4>;
+            key-positions = <7 19 31 7 19 31 41>;
         };
     };
 
