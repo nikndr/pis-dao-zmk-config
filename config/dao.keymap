@@ -206,9 +206,9 @@
         controls {
             display-name = "CTL";
             bindings = <
-&trans  &trans        &trans         &trans        &trans         &trans      &kp LG(LEFT_BRACKET)  &kp LG(Z)      &kp LS(LG(Z))  &kp LG(RIGHT_BRACKET)  &trans          &trans
-&trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp ESCAPE  &kp LEFT              &kp DOWN       &kp UP_ARROW   &kp RIGHT              &kp LEFT_SHIFT  &trans
-&trans  &trans        &trans         &trans        &trans         &trans      &kp HOME              &kp PAGE_DOWN  &kp PAGE_UP    &kp END                &trans          &trans
+&trans  &trans        &trans         &trans        &trans         &trans      &kp LG(LEFT_BRACKET)  &kp LG(DOWN)   &kp LG(UP)    &kp LG(RIGHT_BRACKET)  &trans  &trans
+&trans  &kp LSHFT     &kp LCTRL      &kp LALT      &kp LGUI       &kp ESCAPE  &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &trans  &trans
+&trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LA(LEFT)  &kp LA(RIGHT)  &trans      &kp HOME              &kp PAGE_DOWN  &kp PAGE_UP   &kp END                &trans  &trans
                                      &trans        &trans         &trans      &trans                &kp DELETE     &trans
             >;
         };
