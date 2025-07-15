@@ -213,7 +213,7 @@
             bindings = <
 &trans  &trans        &trans         &trans        &trans         &trans      &kp LG(LEFT_BRACKET)  &kp END        &kp HOME      &kp LG(RIGHT_BRACKET)  &trans  &trans
 &trans  &kp LSHFT     &kp LCTRL      &kp LALT      &kp LGUI       &kp ESCAPE  &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &trans  &trans
-&trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LA(LEFT)  &kp LA(RIGHT)  &trans      &kp LG(LA(LEFT))      &kp PAGE_DOWN  &kp PAGE_UP   &kp LG(LA(RIGHT))      &trans  &trans
+&trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LA(LEFT)  &kp LA(RIGHT)  &trans      &kp LG(DOWN)          &kp PAGE_DOWN  &kp PAGE_UP   &kp LG(UP)             &trans  &trans
                                      &trans        &trans         &trans      &trans                &kp DELETE     &trans
             >;
         };
