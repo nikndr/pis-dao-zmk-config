@@ -104,7 +104,7 @@
 
         hardware_right {
             bindings = <&tog 4>;
-            key-positions = <7 19 31 7 19 31 41>;
+            key-positions = <6 18 30 40>;
         };
     };
 
