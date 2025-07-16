@@ -181,10 +181,10 @@
 
         failsafe {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&to 0  &to 0  &to 0  &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-                     &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &to 0  &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
+&to 0  &to 0  &to 0  &to 0  &to 0  &to 0  &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
+&to 0  &to 0  &to 0  &to 0  &to 0  &to 0  &to 0  &none  &none  &none  &none  &none
+                     &to 0  &to 0  &to 0  &to 0  &to 0  &to 0
             >;
 
             label = "FAILSAFE";
