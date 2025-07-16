@@ -106,6 +106,17 @@
             bindings = <&tog 4>;
             key-positions = <6 18 30 40>;
         };
+
+        hard_safe_left {
+            bindings = <&to 5>;
+            key-positions = <0 1 2 3 4 1 2 3 4 0 1 2 3 4>;
+            layers = <4>;
+        };
+
+        hard_safe_right {
+            bindings = <&to 5>;
+            key-positions = <32 33 34 35 31>;
+        };
     };
 
     macros {
@@ -166,6 +177,15 @@
             >;
 
             label = "FCN";
+        };
+
+        HARDWARE_FAILSAFE {
+            bindings = <
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&to 0  &to 0  &to 0  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+                     &none  &none  &none  &none  &none  &none
+            >;
         };
 
         hardware {
