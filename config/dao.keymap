@@ -38,12 +38,6 @@
 
 / {
     behaviors {
-        stl: switch_to_layer {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "SWITCH_TO_LAYER";
-            #binding-cells = <1>;
-        };
-
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_MOD_LEFT";
@@ -72,23 +66,6 @@
             hold-trigger-on-release;
         };
 
-        td_shift: tap_dance_shift {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_SHIFT";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk LSHFT>, <&caps_word>;
-        };
-
-        bspc_del: backspace_delete {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_DELETE";
-            #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp DEL>;
-
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
         sc_part: sc_part {
             compatible = "zmk,behavior-tap-dance";
             label = "SC_PART";
@@ -113,47 +90,6 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
-        };
-
-        mt_esc: meh_tab_esc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MEH_TAB_ESC";
-            bindings = <&th_hold LC(LA(LEFT_SHIFT)) TAB>, <&kp ESCAPE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RGUI)>;
-        };
-
-        rme_rctl: rme_rctl {
-            compatible = "zmk,behavior-tap-dance";
-            label = "RME_RCTL";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_META>, <&kp RIGHT_CONTROL>;
-        };
-
-        lng_or_slash: lng_or_slash {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LNG_OR_SLASH";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>, <&slash_urk>;
-
-            tapping-term-ms = <220>;
-        };
-
-        lng_or_at: lng_or_at {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LNG_OR_AT";
-            #binding-cells = <0>;
-            tapping-term-ms = <220>;
-            bindings = <&kp LC(SPACE)>, <&at_ukr>;
-        };
-
-        lng_sl_at: lng_sl_at {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&lng_or_slash>, <&lng_or_at>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
         };
     };
 
@@ -180,20 +116,6 @@
             label = "LOG_HRD_LYR";
         };
 
-        slash_urk: slash_urk {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &kp FSLH &kp LC(SPACE)>;
-            label = "SLASH_URK";
-        };
-
-        at_ukr: at_ukr {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &kp AT_SIGN &kp LC(SPACE)>;
-            label = "AT_UKR";
-        };
-
         menu_help: menu_help {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -208,10 +130,10 @@
         base {
             display-name = "MAIN";
             bindings = <
-&kp GRAVE      &kp Q              &kp W                &kp E                   &kp R             &kp T        &kp Y      &kp U             &kp I                                 &kp O                &kp P                 &kp LBKT
-&kp RBKT       &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D         &hml LEFT_META F  &kp G        &kp H      &hmr LEFT_META J  &hmr LEFT_ALT K                       &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
-&kp BACKSLASH  &kp Z              &kp X                &kp C                   &kp V             &kp B        &kp N      &kp M             &kp COMMA                             &kp DOT              &kp FSLH              &lng_sl_at
-                                                       &kp LA(LC(LEFT_SHIFT))  &sk LEFT_SHIFT    &lt 1 SPACE  &lt 2 RET  &kp BACKSPACE     &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT
+&kp GRAVE      &kp Q              &kp W                &kp E                   &kp R             &kp T        &kp Y      &kp U             &kp I                     &kp O                &kp P                 &kp LBKT
+&kp RBKT       &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D         &hml LEFT_META F  &kp G        &kp H      &hmr LEFT_META J  &hmr LEFT_ALT K           &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
+&kp BACKSLASH  &kp Z              &kp X                &kp C                   &kp V             &kp B        &kp N      &kp M             &kp COMMA                 &kp DOT              &kp FSLH              &trans
+                                                       &kp LA(LC(LEFT_SHIFT))  &sk LEFT_SHIFT    &lt 1 SPACE  &lt 2 RET  &kp BACKSPACE     &th_hold GLOBE LC(SPACE)
             >;
         };
 
