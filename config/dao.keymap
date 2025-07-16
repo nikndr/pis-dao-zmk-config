@@ -197,7 +197,7 @@
         menu_help: menu_help {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(F3) &kp H &kp E &kp L &kp P &kp RETURN>;
+            bindings = <&kp LC(F2) &kp H &kp E &kp L &kp P &kp RETURN>;
             label = "MENU_HELP";
         };
     };
