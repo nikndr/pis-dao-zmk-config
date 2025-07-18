@@ -151,10 +151,10 @@
         controls {
             display-name = "CTL";
             bindings = <
-&trans  &trans        &trans         &trans        &trans         &trans      &kp LG(LEFT_BRACKET)  &kp END        &kp HOME      &kp LG(RIGHT_BRACKET)  &trans  &trans
-&trans  &kp LSHFT     &kp LCTRL      &kp LALT      &kp LGUI       &kp ESCAPE  &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &trans  &trans
-&trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp TAB     &kp RETURN            &kp PAGE_DOWN  &kp PAGE_UP   &trans                 &trans  &trans
-                                     &trans        &trans         &trans      &trans                &kp DELETE     &trans
+&trans  &trans        &trans         &trans        &trans         &kp CAPSLOCK  &kp LG(LEFT_BRACKET)  &kp END        &kp HOME      &kp LG(RIGHT_BRACKET)  &trans  &trans
+&trans  &kp LSHFT     &kp LCTRL      &kp LALT      &kp LGUI       &kp ESCAPE    &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &trans  &trans
+&trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp TAB       &trans                &kp PAGE_DOWN  &kp PAGE_UP   &trans                 &trans  &trans
+                                     &trans        &trans         &trans        &trans                &kp DELETE     &trans
             >;
         };
 
