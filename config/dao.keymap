@@ -119,7 +119,7 @@
         menu_help: menu_help {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(F2) &kp H &kp E &kp L &kp P &kp RETURN>;
+            bindings = <&kp LC(F2) &macro_wait_time 200 &kp H &macro_wait_time 80 &kp E &macro_wait_time 80 &kp L &macro_wait_time 80 &kp P &macro_wait_time 80 &kp RETURN>;
             label = "MENU_HELP";
         };
     };
