@@ -117,6 +117,22 @@
             bindings = <&kp LG(LA(LS(N0)))>, <&kp LG(LA(LS(NUMBER_1)))>;
         };
 
+        swapper_up: swapper_up {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER_UP";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp UP>, <&kt LGUI>;
+            ignored-key-positions = <19 20 39>; // j k right_thumb
+        };
+
+        swapper_down: swapper_down {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER_DOWN";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp DOWN>, <&kt LGUI>;
+            ignored-key-positions = <19 20 39>; // j k right_thumb
+        };
+
 
     };
 
@@ -135,13 +151,13 @@
         };
 
         combo_app_up {
-            bindings = <&app_up_macro>;
+            bindings = <&swapper_up>;
             key-positions = <19 39>; // j + right_thumb
             layers = <0>;
         };
 
         combo_app_down {
-            bindings = <&app_down_macro>;
+            bindings = <&swapper_down>;
             key-positions = <20 39>; // k + right_thumb  
             layers = <0>;
         };
@@ -222,19 +238,7 @@
             label = "MENU_HELP";
         };
 
-        app_up_macro: app_up_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(UP)>;
-            label = "APP_UP_MACRO";
-        };
 
-        app_down_macro: app_down_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(DOWN)>;
-            label = "APP_DOWN_MACRO";
-        };
     };
 
     keymap {
