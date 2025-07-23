@@ -176,7 +176,7 @@
 
         combo_lbkt {
             bindings = <&kp LBKT>;
-            key-positions = <4 5>; // rt
+            key-positions = <3 4>; // er
             layers = <0>;
         };
 
