@@ -116,6 +116,22 @@
             #binding-cells = <0>;
             bindings = <&kp LG(LA(LS(N0)))>, <&kp LG(LA(LS(NUMBER_1)))>;
         };
+
+        swapper_up: swapper_up {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER_UP";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp UP>, <&kt LGUI>;
+            ignored-key-positions = <19 20 39>; // j k swapper_key
+        };
+
+        swapper_down: swapper_down {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER_DOWN";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp DOWN>, <&kt LGUI>;
+            ignored-key-positions = <19 20 39>; // j k swapper_key
+        };
     };
 
     combos {
@@ -130,6 +146,66 @@
         hardware_right {
             bindings = <&to 4>;
             key-positions = <6 18 30 40>;
+        };
+
+        combo_app_up {
+            bindings = <&swapper_up>;
+            key-positions = <19 39>; // j + right_thumb
+            layers = <0>;
+        };
+
+        combo_app_down {
+            bindings = <&swapper_down>;
+            key-positions = <20 39>; // k + right_thumb  
+            layers = <0>;
+        };
+
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <14 15>; // sd
+            layers = <0>;
+        };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <25 27>; // xc
+            layers = <0>;
+        };
+
+        combo_lbkt {
+            bindings = <&kp LBKT>;
+            key-positions = <4 5>; // rt
+            layers = <0>;
+        };
+
+        combo_rbkt {
+            bindings = <&kp RBKT>;
+            key-positions = <7 8>; // ui
+            layers = <0>;
+        };
+
+        combo_lpar {
+            bindings = <&kp LPAR>;
+            key-positions = <15 16>; // df
+            layers = <0>;
+        };
+
+        combo_rpar {
+            bindings = <&kp RPAR>;
+            key-positions = <19 20>; // jk
+            layers = <0>;
+        };
+
+        combo_lbrc {
+            bindings = <&kp LBRC>;
+            key-positions = <27 28>; // cv
+            layers = <0>;
+        };
+
+        combo_rbrc {
+            bindings = <&kp RBRC>;
+            key-positions = <31 32>; // m,
+            layers = <0>;
         };
     };
 
