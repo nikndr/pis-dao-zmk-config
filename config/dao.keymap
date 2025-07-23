@@ -117,21 +117,7 @@
             bindings = <&kp LG(LA(LS(N0)))>, <&kp LG(LA(LS(NUMBER_1)))>;
         };
 
-        swapper_up: swapper_up {
-            compatible = "zmk,behavior-tri-state";
-            label = "SWAPPER_UP";
-            #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp UP>, <&kt LGUI>;
-            ignored-key-positions = <19 20 39>; // j k right_thumb
-        };
 
-        swapper_down: swapper_down {
-            compatible = "zmk,behavior-tri-state";
-            label = "SWAPPER_DOWN";
-            #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp DOWN>, <&kt LGUI>;
-            ignored-key-positions = <19 20 39>; // j k right_thumb
-        };
 
 
     };
@@ -150,17 +136,7 @@
             key-positions = <6 18 30 40>;
         };
 
-        combo_app_up {
-            bindings = <&swapper_up>;
-            key-positions = <19 39>; // j + right_thumb
-            layers = <0>;
-        };
 
-        combo_app_down {
-            bindings = <&swapper_down>;
-            key-positions = <20 39>; // k + right_thumb  
-            layers = <0>;
-        };
 
         combo_esc {
             bindings = <&kp ESC>;
@@ -170,7 +146,7 @@
 
         combo_tab {
             bindings = <&kp TAB>;
-            key-positions = <25 27>; // xc
+            key-positions = <26 27>; // xc
             layers = <0>;
         };
 
@@ -237,8 +213,6 @@
 
             label = "MENU_HELP";
         };
-
-
     };
 
     keymap {
@@ -259,7 +233,7 @@
             bindings = <
 &trans  &trans     &trans     &trans    &trans    &kp CAPSLOCK  &kp LG(LEFT_BRACKET)  &kp END        &kp HOME      &kp LG(RIGHT_BRACKET)  &trans  &trans
 &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &kp ESCAPE    &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &trans  &trans
-&trans  &trans     &trans     &trans    &trans    &kp TAB       &alt_l_gui_l          &kp PAGE_DOWN  &kp PAGE_UP   &alt_r_gui_r           &trans  &trans
+&trans  &trans     &trans     &kp LG(UP) &kp LG(DOWN) &kp TAB   &alt_l_gui_l          &kp PAGE_DOWN  &kp PAGE_UP   &alt_r_gui_r           &trans  &trans
                               &trans    &trans    &trans        &trans                &kp DELETE     &trans
             >;
         };

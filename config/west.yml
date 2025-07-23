@@ -6,8 +6,6 @@ manifest:
       url-base: https://github.com/ergonautkb
     - name: urob
       url-base: https://github.com/urob
-    - name: nikndr
-      url-base: https://github.com/nikndr
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -18,9 +16,6 @@ manifest:
       revision: main
     - name: zmk-helpers
       remote: urob
-      revision: main
-    - name: zmk-tri-state
-      remote: nikndr
       revision: main
   self:
     path: config
