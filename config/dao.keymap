@@ -153,7 +153,7 @@
             layers = <0>;
             timeout-ms = <40>;
         };
-        
+
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <14 15>; // sd
@@ -189,6 +189,14 @@
             key-positions = <31 32>; // m,
             layers = <0>;
             timeout-ms = <40>;
+        };
+
+        combo_return {
+            bindings = <&kp RETURN>;
+            key-positions = <20 21>;
+            timeout-ms = <40>;
+            layers = <0>;
+            require-prior-idle-ms = <150>;
         };
     };
 
