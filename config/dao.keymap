@@ -132,31 +132,10 @@
             key-positions = <6 18 30 40>;
         };
 
-        combo_esc {
-            bindings = <&kp ESC>;
-            key-positions = <14 15>; // sd
-            layers = <0>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
-        };
-
-        combo_tab {
-            bindings = <&kp TAB>;
-            key-positions = <26 27>; // xc
-            layers = <0>;
-            timeout-ms = <40>;
-        };
-
+        // LEFT HAND COMBOS (right to left)
         combo_lbkt {
             bindings = <&kp LBKT>;
             key-positions = <3 4>; // er
-            layers = <0>;
-            timeout-ms = <40>;
-        };
-
-        combo_rbkt {
-            bindings = <&kp RBKT>;
-            key-positions = <7 8>; // ui
             layers = <0>;
             timeout-ms = <40>;
         };
@@ -169,9 +148,9 @@
             require-prior-idle-ms = <150>;
         };
 
-        combo_rpar {
-            bindings = <&kp RPAR>;
-            key-positions = <19 20>; // jk
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <14 15>; // sd
             layers = <0>;
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
@@ -182,6 +161,29 @@
             key-positions = <27 28>; // cv
             layers = <0>;
             timeout-ms = <40>;
+        };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <26 27>; // xc
+            layers = <0>;
+            timeout-ms = <40>;
+        };
+
+        // RIGHT HAND COMBOS (left to right, mirrored)
+        combo_rbkt {
+            bindings = <&kp RBKT>;
+            key-positions = <7 8>; // ui
+            layers = <0>;
+            timeout-ms = <40>;
+        };
+
+        combo_rpar {
+            bindings = <&kp RPAR>;
+            key-positions = <19 20>; // jk
+            layers = <0>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
         };
 
         combo_rbrc {
