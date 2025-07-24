@@ -278,10 +278,10 @@
         controls {
             display-name = "CTL";
             bindings = <
-&trans  &trans     &trans     &trans    &trans    &kp CAPSLOCK  &kp LG(LEFT_BRACKET)  &kp END        &kp HOME      &kp LG(RIGHT_BRACKET)  &trans  &trans
-&trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &kp ESCAPE    &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &trans  &trans
-&trans  &trans     &trans     &trans    &trans    &kp TAB       &alt_l_gui_l          &kp PAGE_DOWN  &kp PAGE_UP   &alt_r_gui_r           &trans  &trans
-                              &trans    &trans    &trans        &trans                &kp DELETE     &trans
+&trans  &trans     &trans     &trans             &trans             &kp CAPSLOCK  &kp LG(LEFT_BRACKET)  &kp END        &kp HOME      &kp LG(RIGHT_BRACKET)  &trans  &trans
+&trans  &kp LSHFT  &kp LCTRL  &kp LALT           &kp LGUI           &kp ESCAPE    &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &trans  &trans
+&trans  &trans     &trans     &kp LA(BACKSPACE)  &kp LG(BACKSPACE)  &kp TAB       &alt_l_gui_l          &kp PAGE_DOWN  &kp PAGE_UP   &alt_r_gui_r           &trans  &trans
+                              &trans             &trans             &trans        &trans                &kp DELETE     &trans
             >;
         };
 
