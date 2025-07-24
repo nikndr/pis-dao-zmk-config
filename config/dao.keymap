@@ -121,6 +121,17 @@
     combos {
         compatible = "zmk,combos";
 
+        hardware_left {
+            bindings = <&to 4>;
+            key-positions = <5 17 29 37>; // t g b keys
+            layers = <0>;
+        };
+
+        hardware_right {
+            bindings = <&to 4>;
+            key-positions = <6 18 30 40>;
+        };
+
         combo_lbkt {
             bindings = <&kp LBKT>;
             key-positions = <3 4>; // er
@@ -178,17 +189,6 @@
             key-positions = <31 32>; // m,
             layers = <0>;
             timeout-ms = <40>;
-        };
-
-        hardware_left {
-            bindings = <&to 4>;
-            key-positions = <5 17 29 37>; // t g b keys
-            layers = <0>;
-        };
-
-        hardware_right {
-            bindings = <&to 4>;
-            key-positions = <6 18 30 40>;
         };
     };
 
