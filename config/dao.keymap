@@ -116,6 +116,24 @@
             #binding-cells = <0>;
             bindings = <&kp LG(LA(LS(N0)))>, <&kp LG(LA(LS(NUMBER_1)))>;
         };
+
+        sk_sft: sk_sft {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SK_SFT";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <450>;
+            quick-release;
+        };
+
+        sk_globe: sk_globe {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SK_GLOBE";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <600>;
+            quick-release;
+        };
     };
 
     combos {
@@ -250,10 +268,10 @@
         base {
             display-name = "BASE";
             bindings = <
-&kp GRAVE      &kp Q              &kp W                &kp E                   &kp R             &kp T        &kp Y  &kp U             &kp I                     &kp O                &kp P                 &kp LBKT
-&kp RBKT       &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D         &hml LEFT_META F  &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K           &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
-&kp BACKSLASH  &kp Z              &kp X                &kp C                   &kp V             &kp B        &kp N  &kp M             &kp COMMA                 &kp DOT              &kp FSLH              &kp RETURN
-                                                       &kp LA(LC(LEFT_SHIFT))  &sk LEFT_SHIFT    &lt 1 SPACE  &mo 2  &kp BACKSPACE     &th_hold GLOBE LC(SPACE)
+&kp GRAVE      &kp Q              &kp W                &kp E                   &kp R               &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &kp LBKT
+&kp RBKT       &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D         &hml LEFT_META F    &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
+&kp BACKSLASH  &kp Z              &kp X                &kp C                   &kp V               &kp B        &kp N  &kp M             &kp COMMA        &kp DOT              &kp FSLH              &kp LC(SPACE)
+                                                       &kp LA(LC(LEFT_SHIFT))  &sk_sft LEFT_SHIFT  &lt 1 SPACE  &mo 2  &kp BACKSPACE     &sk_globe GLOBE
             >;
         };
 
