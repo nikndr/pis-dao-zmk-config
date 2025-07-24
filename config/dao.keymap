@@ -125,15 +125,6 @@
             release-after-ms = <450>;
             quick-release;
         };
-
-        sk_globe: sk_globe {
-            compatible = "zmk,behavior-sticky-key";
-            label = "SK_GLOBE";
-            bindings = <&kp>;
-            #binding-cells = <1>;
-            release-after-ms = <600>;
-            quick-release;
-        };
     };
 
     combos {
@@ -271,7 +262,7 @@
 &kp GRAVE      &kp Q              &kp W                &kp E                   &kp R               &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &kp LBKT
 &kp RBKT       &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D         &hml LEFT_META F    &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
 &kp BACKSLASH  &kp Z              &kp X                &kp C                   &kp V               &kp B        &kp N  &kp M             &kp COMMA        &kp DOT              &kp FSLH              &kp LC(SPACE)
-                                                       &kp LA(LC(LEFT_SHIFT))  &sk_sft LEFT_SHIFT  &lt 1 SPACE  &mo 2  &kp BACKSPACE     &sk_globe GLOBE
+                                                       &kp LA(LC(LEFT_SHIFT))  &sk_sft LEFT_SHIFT  &lt 1 SPACE  &mo 2  &kp BACKSPACE     &kp GLOBE
             >;
         };
 
@@ -288,10 +279,10 @@
         characters {
             display-name = "SYM";
             bindings = <
-&trans  &kp EXCLAMATION   &kp AT_SIGN    &kp POUND       &kp DOLLAR            &kp PERCENT     &kp CARET  &kp AMPS               &kp ASTERISK     &kp KP_MINUS      &kp KP_PLUS        &trans
-&trans  &kp N1            &kp N2         &kp N3          &kp N4                &kp N5          &kp N6     &kp N7                 &kp N8           &kp N9            &kp N0             &trans
-&trans  &kp LEFT_BRACKET  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp UNDERSCORE  &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp RIGHT_BRACKET  &trans
-                                         &trans          &trans                &trans          &trans     &trans                 &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR         &kp PERCENT  &kp CARET  &kp AMPS     &kp ASTERISK  &trans  &trans  &trans
+&trans  &kp N1           &kp N2       &kp N3     &kp N4             &kp N5       &kp N6     &kp N7       &kp N8        &kp N9  &kp N0  &trans
+&trans  &trans           &trans       &trans     &kp DOUBLE_QUOTES  &trans       &trans     &kp KP_PLUS  &kp KP_MINUS  &trans  &trans  &trans
+                                      &trans     &trans             &trans       &trans     &trans       &trans
             >;
         };
 
