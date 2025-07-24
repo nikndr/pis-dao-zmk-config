@@ -136,14 +136,14 @@
             bindings = <&kp LBKT>;
             key-positions = <3 4>; // er
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <80>;
         };
 
         combo_lpar {
             bindings = <&kp LPAR>;
             key-positions = <15 16>; // df
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <80>;
             require-prior-idle-ms = <150>;
         };
 
@@ -151,14 +151,14 @@
             bindings = <&kp LBRC>;
             key-positions = <27 28>; // cv
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <80>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <14 15>; // sd
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <80>;
             require-prior-idle-ms = <150>;
         };
 
@@ -166,21 +166,21 @@
             bindings = <&kp TAB>;
             key-positions = <26 27>; // xc
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <80>;
         };
 
         combo_rbkt {
             bindings = <&kp RBKT>;
             key-positions = <7 8>; // ui
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <80>;
         };
 
         combo_rpar {
             bindings = <&kp RPAR>;
             key-positions = <19 20>; // jk
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <80>;
             require-prior-idle-ms = <150>;
         };
 
@@ -188,13 +188,13 @@
             bindings = <&kp RBRC>;
             key-positions = <31 32>; // m,
             layers = <0>;
-            timeout-ms = <40>;
+            timeout-ms = <80>;
         };
 
         combo_return {
             bindings = <&kp RETURN>;
             key-positions = <20 21>;
-            timeout-ms = <40>;
+            timeout-ms = <80>;
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
