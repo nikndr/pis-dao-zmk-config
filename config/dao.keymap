@@ -198,6 +198,22 @@
             layers = <0>;
             require-prior-idle-ms = <150>;
         };
+
+        combo_equals {
+            bindings = <&kp KP_EQUAL>;
+            key-positions = <19 20>;
+            layers = <2>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+        };
+
+        combo_underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <15 16>;
+            layers = <2>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+        };
     };
 
     macros {
