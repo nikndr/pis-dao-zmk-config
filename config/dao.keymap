@@ -7,10 +7,11 @@
 #define HOST_OS 2
 
 #include "zmk-helpers/helper.h"
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DEF 0
 #define LWR 1
@@ -140,6 +141,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "OPT_SCROLL_DOWN";
             bindings = <&kp DOWN>, <&msc SCRL_DOWN>;
+
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
@@ -148,6 +150,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "OPT_SCROLL_UP";
             bindings = <&kp UP>, <&msc SCRL_UP>;
+
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
@@ -292,7 +295,7 @@
             bindings = <
 &kp GRAVE      &kp Q              &kp W                &kp E            &kp R               &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &kp LBKT
 &kp RBKT       &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F    &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
-&kp BACKSLASH  &kp Z              &kp X                &kp C            &lt MSE V           &kp B        &kp N  &kp M             &kp COMMA        &kp DOT              &kp FSLH              &kp LC(SPACE)
+&kp BACKSLASH  &lt 4 Z            &kp X                &kp C            &kp V               &kp B        &kp N  &kp M             &kp COMMA        &kp DOT              &kp FSLH              &kp LC(SPACE)
                                                        &meh_hyper       &sk_sft LEFT_SHIFT  &lt 1 SPACE  &mo 2  &kp BACKSPACE     &kp GLOBE
             >;
         };
@@ -303,7 +306,7 @@
 &trans  &kp CAPSLOCK  &trans     &trans             &trans             &trans  &kp LG(LEFT_BRACKET)  &kp END        &kp HOME      &kp LG(RIGHT_BRACKET)  &trans  &trans
 &trans  &kp LSHFT     &kp LCTRL  &kp LALT           &kp LGUI           &trans  &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &trans  &trans
 &trans  &trans        &trans     &kp LA(BACKSPACE)  &kp LG(BACKSPACE)  &trans  &alt_l_gui_l          &kp PAGE_DOWN  &kp PAGE_UP   &alt_r_gui_r           &trans  &trans
-                                 &trans             &trans             &trans  &trans                &kp DELETE     &trans
+                                 &trans             &trans             &trans  &trans                &kp BACKSPACE  &kp DELETE
             >;
         };
 
@@ -331,10 +334,10 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &kp END        &kp HOME      &trans            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_LEFT    &opt_scroll_down  &opt_scroll_up  &msc SCRL_RIGHT   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &kp PAGE_DOWN  &kp PAGE_UP   &trans            &trans  &trans
-                        &trans  &trans  &trans  &mkp LCLK         &mkp MCLK      &mkp RCLK
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp END           &kp HOME        &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_LEFT  &opt_scroll_down  &opt_scroll_up  &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_DOWN     &kp PAGE_UP     &trans           &trans  &trans
+                        &trans  &trans  &trans  &mkp LCLK       &mkp MCLK         &mkp RCLK
             >;
         };
 
