@@ -154,6 +154,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
+
+        move_sc_left: move_sc_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOVE_SC_LEFT";
+            bindings = <&mmv MOVE_LEFT>, <&msc SCRL_LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+
+        move_sc_down: move_sc_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOVE_SC_DOWN";
+            bindings = <&mmv MOVE_DOWN>, <&msc SCRL_DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+
+        move_sc_up: move_sc_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOVE_SC_UP";
+            bindings = <&mmv MOVE_UP>, <&msc SCRL_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+
+        move_sc_right: move_sc_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOVE_SC_RIGHT";
+            bindings = <&mmv MOVE_RIGHT>, <&msc SCRL_RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     combos {
@@ -334,10 +370,10 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp END           &kp HOME        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_LEFT  &opt_scroll_down  &opt_scroll_up  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp PAGE_DOWN     &kp PAGE_UP     &trans           &trans  &trans
-                        &trans  &trans  &trans  &mkp LCLK       &mkp MCLK         &mkp RCLK
+&trans  &trans  &trans     &trans    &trans    &trans  &trans         &kp END        &kp HOME     &trans          &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &move_sc_left  &move_sc_down  &move_sc_up  &move_sc_right  &trans  &trans
+&trans  &trans  &trans     &trans    &trans    &trans  &trans         &kp PAGE_DOWN  &kp PAGE_UP  &trans          &trans  &trans
+                           &trans    &trans    &trans  &mkp LCLK      &mkp MCLK      &mkp RCLK
             >;
         };
 
