@@ -152,49 +152,13 @@
             bindings = <&kp LC(LA(LEFT_SHIFT))>, <&kp LC(LA(LG(LEFT_SHIFT)))>;
         };
 
-        opt_scroll_down: opt_scroll_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "OPT_SCROLL_DOWN";
-            bindings = <&kp DOWN>, <&msc SCRL_DOWN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        opt_scroll_up: opt_scroll_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "OPT_SCROLL_UP";
-            bindings = <&kp UP>, <&msc SCRL_UP>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
         move_sc_left: move_sc_left {
             compatible = "zmk,behavior-mod-morph";
             label = "MOVE_SC_LEFT";
             bindings = <&mmv MOVE_LEFT>, <&msc SCRL_LEFT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
-        move_sc_down: move_sc_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOVE_SC_DOWN";
-            bindings = <&mmv MOVE_DOWN>, <&msc SCRL_DOWN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
-        move_sc_up: move_sc_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOVE_SC_UP";
-            bindings = <&mmv MOVE_UP>, <&msc SCRL_UP>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LALT)>;
         };
 
         move_sc_right: move_sc_right {
@@ -385,10 +349,10 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-&trans  &trans  &trans     &trans    &trans    &trans  &trans     &kp HOME       &move_sc_up    &kp END         &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &trans     &move_sc_left  &move_sc_down  &move_sc_right  &trans  &trans
-&trans  &trans  &trans     &trans    &trans    &trans  &trans     &kp PAGE_UP    &trans         &kp PAGE_DOWN   &trans  &trans
-                           &trans    &trans    &trans  &mkp LCLK  &mkp MCLK      &mkp RCLK
+&trans  &trans  &trans     &trans    &trans    &trans  &msc SCRL_UP    &kp HOME       &mmv MOVE_UP    &kp END         &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &msc SCRL_DOWN  &move_sc_left  &mmv MOVE_DOWN  &move_sc_right  &trans  &trans
+&trans  &trans  &trans     &trans    &trans    &trans  &trans          &kp PAGE_UP    &trans          &kp PAGE_DOWN   &trans  &trans
+                           &trans    &trans    &trans  &mkp LCLK       &mkp MCLK      &mkp RCLK
             >;
         };
 
