@@ -7,6 +7,7 @@
 #define HOST_OS 2
 
 // Increase mouse movement and scroll speeds
+
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
@@ -37,13 +38,13 @@
 &caps_word { continue-list = <UNDERSCORE MINUS>; };
 
 &mmv {
-    time-to-max-speed-ms = <300>;  
-    acceleration-exponent = <1>;   
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <1>;
 };
 
 &msc {
-    time-to-max-speed-ms = <40>;   
-    acceleration-exponent = <0>;   
+    time-to-max-speed-ms = <40>;
+    acceleration-exponent = <0>;
 };
 
 / {
@@ -384,10 +385,10 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-&trans  &trans  &trans     &trans    &trans    &trans  &trans         &kp END        &kp HOME     &trans          &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &move_sc_left  &move_sc_down  &move_sc_up  &move_sc_right  &trans  &trans
-&trans  &trans  &trans     &trans    &trans    &trans  &trans         &kp PAGE_DOWN  &kp PAGE_UP  &trans          &trans  &trans
-                           &trans    &trans    &trans  &mkp LCLK      &mkp MCLK      &mkp RCLK
+&trans  &trans  &trans     &trans    &trans    &trans  &trans     &kp HOME       &move_sc_up    &kp END         &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &trans     &move_sc_left  &move_sc_down  &move_sc_right  &trans  &trans
+&trans  &trans  &trans     &trans    &trans    &trans  &trans     &kp PAGE_UP    &trans         &kp PAGE_DOWN   &trans  &trans
+                           &trans    &trans    &trans  &mkp LCLK  &mkp MCLK      &mkp RCLK
             >;
         };
 
