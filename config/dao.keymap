@@ -152,22 +152,22 @@
             bindings = <&kp LC(LA(LEFT_SHIFT))>, <&kp LC(LA(LG(LEFT_SHIFT)))>;
         };
 
-        move_sc_left: move_sc_left {
+        sc_up_left: sc_up_left {
             compatible = "zmk,behavior-mod-morph";
-            label = "MOVE_SC_LEFT";
-            bindings = <&mmv MOVE_LEFT>, <&msc SCRL_LEFT>;
+            label = "SC_UP_LEFT";
+            bindings = <&msc SCRL_UP>, <&msc SCRL_LEFT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
 
-        move_sc_right: move_sc_right {
+        sc_down_right: sc_down_right {
             compatible = "zmk,behavior-mod-morph";
-            label = "MOVE_SC_RIGHT";
-            bindings = <&mmv MOVE_RIGHT>, <&msc SCRL_RIGHT>;
+            label = "SC_DOWN_RIGHT";
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_RIGHT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LALT)>;
         };
     };
 
@@ -349,10 +349,10 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-&trans  &trans  &trans     &trans    &trans    &trans  &msc SCRL_UP    &kp HOME       &mmv MOVE_UP    &kp END         &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &msc SCRL_DOWN  &move_sc_left  &mmv MOVE_DOWN  &move_sc_right  &trans  &trans
-&trans  &trans  &trans     &trans    &trans    &trans  &trans          &kp PAGE_UP    &trans          &kp PAGE_DOWN   &trans  &trans
-                           &trans    &trans    &trans  &mkp LCLK       &mkp MCLK      &mkp RCLK
+&trans  &trans  &trans     &trans    &trans    &trans  &sc_up_left     &kp HOME        &mmv MOVE_UP    &kp END          &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &sc_down_right  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans     &trans    &trans    &trans  &trans          &kp PAGE_UP     &trans          &kp PAGE_DOWN    &trans  &trans
+                           &trans    &trans    &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK
             >;
         };
 
