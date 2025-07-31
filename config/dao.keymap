@@ -331,9 +331,9 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-&trans  &trans  &trans     &trans    &trans    &trans  &sc_up_left     &kp HOME        &mmv MOVE_UP    &kp END          &trans  &trans
+&trans  &trans  &trans     &trans    &trans    &trans  &sc_up_left     &kp PAGE_UP     &mmv MOVE_UP    &kp HOME         &trans  &trans
 &trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &sc_down_right  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans     &trans    &trans    &trans  &trans          &kp PAGE_UP     &trans          &kp PAGE_DOWN    &trans  &trans
+&trans  &trans  &trans     &trans    &trans    &trans  &trans          &kp PAGE_DOWN   &trans          &kp END          &trans  &trans
                            &trans    &trans    &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK
             >;
         };
