@@ -198,7 +198,7 @@
         };
 
         combo_tab {
-            bindings = <&kp TAB>;
+            bindings = <&kp EQUAL>;
             key-positions = <3 2>; // xc
             layers = <0>;
             timeout-ms = <40>;
@@ -235,7 +235,7 @@
         };
 
         combo_equals {
-            bindings = <&kp KP_EQUAL>;
+            bindings = <&kp TAB>;
             key-positions = <26 27>;
             layers = <0>;
             timeout-ms = <40>;
