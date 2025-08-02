@@ -151,6 +151,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
+
+        bsp_delword: bsp_delword {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSP_DELWORD";
+            bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -305,7 +314,7 @@
 &kp GRAVE      &kp Q    &kp W                &kp E            &kp R               &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &kp LBKT
 &kp RBKT       &lt 4 A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F    &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
 &kp BACKSLASH  &kp Z    &kp X                &kp C            &kp V               &kp B        &kp N  &kp M             &kp COMMA        &kp DOT              &kp FSLH              &kp LC(SPACE)
-                                             &meh_hyper       &sk_sft LEFT_SHIFT  &lt 1 SPACE  &mo 2  &kp BACKSPACE     &kp GLOBE
+                                             &meh_hyper       &sk_sft LEFT_SHIFT  &lt 1 SPACE  &mo 2  &bsp_delword      &kp GLOBE
             >;
         };
 
