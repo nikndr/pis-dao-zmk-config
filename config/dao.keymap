@@ -201,7 +201,7 @@
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <14 15>; // sd
-            layers = <0>;
+            layers = <0 6>;
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
         };
@@ -239,7 +239,7 @@
             bindings = <&kp RETURN>;
             key-positions = <20 21>;
             timeout-ms = <40>;
-            layers = <0>;
+            layers = <0 6>;
             require-prior-idle-ms = <150>;
         };
 
@@ -256,7 +256,7 @@
             key-positions = <21 19>;
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
-            layers = <0>;
+            layers = <0 6>;
         };
 
         combo_1password {
@@ -380,7 +380,7 @@
         };
 
         game_fn {
-            display-name = "GAME";
+            display-name = "GAME_FN";
             bindings = <
 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &trans
