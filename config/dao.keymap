@@ -152,13 +152,20 @@
             mods = <(MOD_LALT)>;
         };
 
-        bsp_delword: bsp_delword {
+        bsp_dw: bsp_dw {
             compatible = "zmk,behavior-mod-morph";
-            label = "BSP_DELWORD";
+            label = "BSP_DW";
             bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+        };
+
+        sh_cps: sh_cps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SH_CPS";
+            #binding-cells = <0>;
+            bindings = <&sk_sft LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
     };
 
@@ -311,10 +318,10 @@
         base {
             display-name = "BASE";
             bindings = <
-&kp GRAVE      &kp Q              &kp W                &kp E            &kp R               &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &kp LBKT
-&kp RBKT       &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F    &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
-&kp BACKSLASH  &lt 4 Z            &kp X                &kp C            &kp V               &kp B        &kp N  &kp M             &kp COMMA        &kp DOT              &kp FSLH              &kp LC(SPACE)
-                                                       &meh_hyper       &sk_sft LEFT_SHIFT  &lt 1 SPACE  &mo 2  &bsp_delword      &kp GLOBE
+&kp GRAVE      &kp Q              &kp W                &kp E            &kp R             &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &kp LBKT
+&kp RBKT       &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F  &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
+&kp BACKSLASH  &lt 4 Z            &kp X                &kp C            &kp V             &kp B        &kp N  &kp M             &kp COMMA        &kp DOT              &kp FSLH              &kp LC(SPACE)
+                                                       &meh_hyper       &sh_cps           &lt 1 SPACE  &mo 2  &bsp_dw           &kp GLOBE
             >;
         };
 
