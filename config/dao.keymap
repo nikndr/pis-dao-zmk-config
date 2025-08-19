@@ -305,7 +305,7 @@
         };
 
         brackets {
-            display-name = "SYM";
+            display-name = "BRK";
             bindings = <
 &trans  &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL  &trans  &trans  &trans  &trans  &trans  &trans
