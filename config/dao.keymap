@@ -350,9 +350,9 @@
         brackets {
             display-name = "SYM";
             bindings = <
-&trans  &kp SPACE  &kp SPACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &trans     &trans
-&trans  &kp SPACE  &kp SPACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &trans
-&trans  &kp SPACE  &kp SPACE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &trans
+&trans  &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COLON  &trans  &trans  &trans  &trans  &trans  &trans
                               &trans                &trans                 &trans     &trans     &trans     &trans
             >;
         };
