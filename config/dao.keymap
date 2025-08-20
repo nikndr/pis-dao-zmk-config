@@ -388,8 +388,8 @@
         compatible = "zmk,conditional-layers";
 
         function_layer {
-            if-layers = <4 1>;
-            then-layer = <5>;
+            if-layers = <1 3>;
+            then-layer = <4>;
         };
     };
 };
