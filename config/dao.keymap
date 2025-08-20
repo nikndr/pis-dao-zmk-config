@@ -249,18 +249,6 @@
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
-
-        leave_mouse_r {
-            bindings = <&to 0>;
-            key-positions = <20 21>;
-            layers = <5>;
-        };
-
-        leave_mouse_l {
-            bindings = <&to 0>;
-            key-positions = <15 14>;
-            layers = <5>;
-        };
     };
 
     macros {
