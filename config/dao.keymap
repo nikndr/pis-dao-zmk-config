@@ -280,10 +280,10 @@
         base {
             display-name = "BASE";
             bindings = <
-&kp GRAVE      &kp Q    &kp W                &kp E            &kp R             &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &kp LBKT
-&kp RBKT       &lt 5 A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F  &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
-&kp BACKSLASH  &lt 5 Z  &kp X                &kp C            &lt 5 V           &kp B        &kp N  &ltr 2 M          &kp COMMA        &kp DOT              &kp FSLH              &kp LC(SPACE)
-                                             &meh_hyper       &sh_cps           &lt 3 SPACE  &mo 1  &kp BACKSPACE     &kp GLOBE
+&kp GRAVE      &kp Q              &kp W                &kp E            &kp R             &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &kp LBKT
+&kp RBKT       &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F  &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
+&kp BACKSLASH  &lt 5 Z            &kp X                &kp C            &kp V             &kp B        &kp N  &ltr 2 M          &kp COMMA        &kp DOT              &kp FSLH              &kp LC(SPACE)
+                                                       &meh_hyper       &sh_cps           &lt 3 SPACE  &mo 1  &kp BACKSPACE     &kp GLOBE
             >;
         };
 
