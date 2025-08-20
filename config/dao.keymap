@@ -315,19 +315,19 @@
         controls {
             display-name = "CTL";
             bindings = <
-&trans  &trans     &trans     &trans    &trans    &trans  &kp LG(LEFT_BRACKET)  &kp PG_UP      &kp HOME      &kp LG(RIGHT_BRACKET)  &trans  &trans
-&trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &trans  &trans
-&trans  &trans     &trans     &trans    &trans    &trans  &trans                &kp PAGE_DOWN  &kp END       &trans                 &trans  &trans
-                              &trans    &trans    &trans  &trans                &kp BACKSPACE  &kp DELETE
+&trans  &trans     &kp C_PREVIOUS     &kp C_NEXT       &kp C_PP    &trans                &kp LG(LEFT_BRACKET)  &kp PG_UP      &kp HOME      &kp LG(RIGHT_BRACKET)  &trans  &trans
+&trans  &kp LSHFT  &kp LCTRL          &kp LALT         &kp LGUI    &kp C_BRIGHTNESS_INC  &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &trans  &trans
+&trans  &trans     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &trans                &kp PAGE_DOWN  &kp END       &trans                 &trans  &trans
+                                      &trans           &trans      &trans                &trans                &kp BACKSPACE  &kp DELETE
             >;
         };
 
         function {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3    &kp F4      &kp F5  &kp F6                &kp F7             &kp F8           &kp F9            &kp F10  &trans
-&trans  &trans  &trans  &sc_full  &sc_part    &nswin  &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS     &kp C_NEXT       &kp C_PLAY_PAUSE  &kp F11  &trans
-&trans  &trans  &trans  &trans    &menu_help  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE        &kp F12  &trans
-                        &trans    &trans      &trans  &trans                &trans             &trans
+&trans  &kp F1  &kp F2  &kp F3    &kp F4      &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &trans  &sc_full  &sc_part    &nswin  &trans  &trans  &trans  &trans  &kp F11  &trans
+&trans  &trans  &trans  &trans    &menu_help  &trans  &trans  &trans  &trans  &trans  &kp F12  &trans
+                        &trans    &trans      &trans  &trans  &trans  &trans
             >;
 
             label = "FCN";
