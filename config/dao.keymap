@@ -300,7 +300,7 @@
             display-name = "BASE";
             bindings = <
 &trans  &kp Q              &kp W                &kp E            &kp R               &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &trans
-&trans  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F    &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &trans
+&trans  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F    &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp APOSTROPHE
 &trans  &lt 6 Z            &kp X                &kp C            &ltl 1 V            &kp B        &kp N  &ltr 2 M          &kp COMMA        &kp DOT              &kp FSLH              &trans
                                                 &meh_hyper       &sk_sft LEFT_SHIFT  &lt 4 SPACE  &c_m   &kp BACKSPACE     &kp GLOBE
             >;
