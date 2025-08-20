@@ -192,7 +192,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "C_M";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&to 5>;
+            bindings = <&mo 1>, <&mo 5>;
 
             tapping-term-ms = <200>;
         };
@@ -367,10 +367,10 @@
         mouse {
             display-name = "MS";
             bindings = <
-&trans  &trans  &trans     &trans    &trans    &trans  &kp PAGE_UP    &kp HOME        &mmv MOVE_UP    &kp END          &trans  &trans
-&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &kp PAGE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans     &trans    &trans    &trans  &trans         &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
-                           &trans    &trans    &trans  &mkp LCLK      &mkp MCLK       &mkp RCLK
+&trans  &trans  &trans     &trans    &trans    &trans  &sc_up_left     &kp PAGE_UP     &mmv MOVE_UP    &kp PAGE_DOWN    &kp HOME  &trans
+&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &sc_down_right  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp END   &trans
+&trans  &trans  &trans     &trans    &trans    &trans  &trans          &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans    &trans
+                           &trans    &trans    &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK
             >;
         };
 
