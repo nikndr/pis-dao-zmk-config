@@ -99,18 +99,6 @@
             bindings = <&kp LS(LG(NUMBER_1))>, <&kp LS(LA(LG(NUMBER_3)))>;
         };
 
-        th_hold: th_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TH_HOLD";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-
-            flavor = "balanced";
-        };
-
         nswin: nswin {
             compatible = "zmk,behavior-tap-dance";
             label = "NEW_SAFARI_WIN";
@@ -150,13 +138,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-        };
-
-        sh_cps: sh_cps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SH_CPS";
-            #binding-cells = <0>;
-            bindings = <&sk_sft LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
 
         ltr: ltr {
