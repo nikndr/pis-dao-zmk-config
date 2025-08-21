@@ -192,11 +192,11 @@
             hold-trigger-on-release;
         };
 
-        ltr_t: ltr_t {
+        ltr_h: ltr_h {
             compatible = "zmk,behavior-hold-tap";
-            label = "LTR_T";
+            label = "LTR_H";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
@@ -206,11 +206,11 @@
             hold-trigger-on-release;
         };
 
-        ltl_t: ltl_t {
+        ltl_h: ltl_h {
             compatible = "zmk,behavior-hold-tap";
-            label = "LTL_T";
+            label = "LTL_H";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
@@ -334,7 +334,7 @@
             bindings = <
 &trans  &kp Q              &kp W                &kp E            &kp R               &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &trans
 &trans  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F    &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &trans
-&trans  &lt 6 Z            &kp X                &ltl_t 1 C       &kp V               &kp B        &kp N  &ltr 2 M          &ltr_t 1 COMMA   &kp DOT              &kp FSLH              &trans
+&trans  &lt 6 Z            &kp X                &ltl_h 1 C       &kp V               &kp B        &kp N  &ltr 2 M          &ltr_h 1 COMMA   &kp DOT              &kp FSLH              &trans
                                                 &meh_hyper       &sk_sft LEFT_SHIFT  &lt 4 SPACE  &c_m   &kp BACKSPACE     &kp GLOBE
             >;
         };
