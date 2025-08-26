@@ -18,28 +18,28 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dao_left
-          path: artifact-dir/dao_left.uf2
+          path: artifact-dir/dao_left/zmk.uf2
 
       - name: Upload dao_right
         uses: actions/upload-artifact@v4
         with:
           name: dao_right
-          path: artifact-dir/dao_right.uf2
+          path: artifact-dir/dao_right/zmk.uf2
 
       - name: Upload dao_left_studio
         uses: actions/upload-artifact@v4
         with:
           name: dao_left_studio
-          path: artifact-dir/dao_left_studio.uf2
+          path: artifact-dir/dao_left_studio/zmk.uf2
 
       - name: Upload dao_right_studio
         uses: actions/upload-artifact@v4
         with:
           name: dao_right_studio
-          path: artifact-dir/dao_right_studio.uf2
+          path: artifact-dir/dao_right_studio/zmk.uf2
 
       - name: Upload settings_reset
         uses: actions/upload-artifact@v4
         with:
           name: settings_reset
-          path: artifact-dir/settings_reset.uf2
+          path: artifact-dir/nice_nano_v2_settings_reset/zmk.uf2
