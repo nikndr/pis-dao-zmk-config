@@ -219,6 +219,15 @@
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
             hold-trigger-on-release;
         };
+
+        ukr_dw: ukr_dw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UKR_DW";
+            bindings = <&mo 1>, <&kp LA(BACKSPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     combos {
@@ -335,7 +344,7 @@
 &trans  &kp Q              &kp W                &kp E            &kp R               &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &trans
 &trans  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F    &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &trans
 &trans  &lt 6 Z            &kp X                &kp C            &kp V               &kp B        &kp N  &ltr 2 M          &kp COMMA        &kp DOT              &kp FSLH              &trans
-                                                &meh_hyper       &sk_sft LEFT_SHIFT  &lt 4 SPACE  &c_m   &mo 1             &kp GLOBE
+                                                &meh_hyper       &sk_sft LEFT_SHIFT  &lt 4 SPACE  &c_m   &ukr_dw           &kp GLOBE
             >;
         };
 
