@@ -12,18 +12,34 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: firmware
-          path: artifact-dir   # put it in a known folder
+          path: artifact-dir
 
-      - name: Extract firmware
-        run: unzip artifact-dir/firmware.zip -d out
+      - name: Upload dao_left
+        uses: actions/upload-artifact@v4
+        with:
+          name: dao_left
+          path: artifact-dir/dao_left.uf2
 
-      # Example: upload all uf2 files automatically
-      - name: Upload all UF2s separately
-        run: |
-          for f in out/*.uf2; do
-            name=$(basename "$f" .uf2)
-            echo "Uploading $f as $name"
-            gh workflow upload-artifact --name "$name" --path "$f"
-          done
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload dao_right
+        uses: actions/upload-artifact@v4
+        with:
+          name: dao_right
+          path: artifact-dir/dao_right.uf2
+
+      - name: Upload dao_left_studio
+        uses: actions/upload-artifact@v4
+        with:
+          name: dao_left_studio
+          path: artifact-dir/dao_left_studio.uf2
+
+      - name: Upload dao_right_studio
+        uses: actions/upload-artifact@v4
+        with:
+          name: dao_right_studio
+          path: artifact-dir/dao_right_studio.uf2
+
+      - name: Upload settings_reset
+        uses: actions/upload-artifact@v4
+        with:
+          name: settings_reset
+          path: artifact-dir/settings_reset.uf2
