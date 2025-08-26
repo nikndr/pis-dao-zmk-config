@@ -228,6 +228,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
+
+        dw_ccw: dw_ccw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DW_CCW";
+            bindings = <&kp LA(BACKSPACE)>, <&kp LC(BACKSPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        dl_r: dl_r {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DL_R";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     combos {
@@ -344,7 +362,7 @@
 &trans  &kp Q              &kp W                &kp E            &kp R               &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &trans
 &trans  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F    &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &trans
 &trans  &lt 6 Z            &kp X                &kp C            &kp V               &kp B        &kp N  &ltr 2 M          &kp COMMA        &kp DOT              &kp FSLH              &trans
-                                                &meh_hyper       &sk_sft LEFT_SHIFT  &lt 4 SPACE  &c_m   &ukr_dw           &kp GLOBE
+                                                &meh_hyper       &sk_sft LEFT_SHIFT  &lt 4 SPACE  &c_m   &mo 1             &kp GLOBE
             >;
         };
 
@@ -383,7 +401,7 @@
 &trans  &trans     &kp C_PREVIOUS     &kp C_NEXT       &kp C_PP    &trans                &kp LG(LEFT_BRACKET)  &kp PG_UP      &kp HOME      &kp LG(RIGHT_BRACKET)  &trans  &trans
 &trans  &kp LSHFT  &kp LCTRL          &kp LALT         &kp LGUI    &kp C_BRIGHTNESS_INC  &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &trans  &trans
 &trans  &trans     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &trans                &kp PAGE_DOWN  &kp END       &trans                 &trans  &trans
-                                      &trans           &trans      &trans                &trans                &kp BACKSPACE  &kp DELETE
+                                      &trans           &trans      &trans                &trans                &dw_ccw        &dl_r
             >;
         };
 
