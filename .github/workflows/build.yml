@@ -9,21 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download firmware.zip
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: firmware
 
-      - name: Extract and re-upload individually
+      - name: Extract firmware
         run: unzip firmware.zip -d out
 
       - name: Upload dao_left
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dao_left
           path: out/dao_left.uf2
 
       - name: Upload dao_right
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dao_right
           path: out/dao_right.uf2
