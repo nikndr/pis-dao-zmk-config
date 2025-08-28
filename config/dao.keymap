@@ -246,6 +246,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
+
+        dw_ns: dw_ns {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DW_NS";
+            bindings = <&dw_ccw>, <&dw_ccw>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -401,7 +410,7 @@
 &trans  &trans     &kp C_PREVIOUS     &kp C_NEXT       &kp C_PP    &trans                &kp LG(LEFT_BRACKET)  &kp PG_UP      &trans         &kp LG(RIGHT_BRACKET)  &kp HOME  &trans
 &trans  &kp LSHFT  &kp LCTRL          &kp LALT         &kp LGUI    &kp C_BRIGHTNESS_INC  &kp LEFT              &kp DOWN       &kp UP_ARROW   &kp RIGHT              &kp END   &trans
 &trans  &trans     &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &dw_ccw               &kp PAGE_DOWN  &kp BACKSPACE  &kp DELETE             &trans    &trans
-                                      &trans           &trans      &trans                &trans                &dw_ccw        &dl_r
+                                      &trans           &trans      &trans                &trans                &dw_ns         &trans
             >;
         };
 
