@@ -416,10 +416,10 @@
 
         function {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3    &kp F4      &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &trans  &sc_full  &sc_part    &nswin  &trans  &trans  &trans  &trans  &kp F11  &trans
-&trans  &trans  &trans  &trans    &menu_help  &trans  &trans  &trans  &trans  &trans  &kp F12  &trans
-                        &trans    &trans      &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3                &kp F4                 &kp F5      &kp F6    &kp F7            &kp F8             &kp F9     &kp F10  &trans
+&trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &nswin      &sc_part  &kp LESS_THAN     &kp GREATER_THAN   &trans     &kp F11  &trans
+&trans  &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &menu_help  &sc_full  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SPACE  &kp F12  &trans
+                        &trans                &trans                 &trans      &trans    &trans            &trans
             >;
 
             label = "FCN";
