@@ -365,7 +365,7 @@
 &trans  &trans         &kp C_PREVIOUS     &kp C_NEXT       &kp C_PP    &trans                &kp LG(LEFT_BRACKET)  &kp PG_UP      &trans        &kp LG(RIGHT_BRACKET)  &kp HOME    &trans
 &trans  &kp LSHFT      &kp LCTRL          &kp LALT         &kp LGUI    &kp C_BRIGHTNESS_INC  &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &kp END     &trans
 &trans  &kp BACKSPACE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &trans                &kp PAGE_DOWN  &dw_dl        &kp BACKSPACE          &kp DELETE  &trans
-                                          &trans           &trans      &trans                &trans                &trans         &trans
+                                          &trans           &trans      &trans                &trans                &kp BACKSPACE  &trans
             >;
         };
 
