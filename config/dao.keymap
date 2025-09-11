@@ -313,7 +313,7 @@
         base {
             display-name = "BASE";
             bindings = <
-&kp LEFT_BRACKET      &kp Q              &kp W                &kp E            &kp R             &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &kp RIGHT_BRACKET
+&kp SINGLE_QUOTE      &kp Q              &kp W                &kp E            &kp R             &kp T        &kp Y  &kp U             &kp I            &kp O                &kp P                 &kp BACKSPACE
 &kp LEFT_PARENTHESIS  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F  &kp G        &kp H  &hmr LEFT_META J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp RIGHT_PARENTHESIS
 &kp LEFT_BRACE        &lt 7 Z            &kp X                &kp C            &ltl 3 V          &kp B        &kp N  &ltr 2 M          &kp COMMA        &kp DOT              &kp FSLH              &kp RIGHT_BRACE
                                                               &meh_hyper       &kp LEFT_SHIFT    &lt 5 SPACE  &c_m   &mo 1             &kp GLOBE
