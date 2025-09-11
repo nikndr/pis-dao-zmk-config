@@ -322,10 +322,10 @@
 
         ukr_extra {
             bindings = <
-&trans  &trans         &trans             &trans  &kp LEFT_BRACKET  &kp SINGLE_QUOTE  &trans  &kp GRAVE  &trans  &trans  &trans  &trans
-&trans  &kp BACKSLASH  &kp RIGHT_BRACKET  &trans  &trans            &trans            &trans  &trans     &trans  &trans  &trans  &trans
-&trans  &trans         &trans             &trans  &trans            &trans            &trans  &trans     &trans  &trans  &trans  &trans
-                                          &trans  &trans            &trans            &trans  &trans     &trans
+&trans  &trans            &trans             &trans  &trans  &kp SINGLE_QUOTE  &trans  &kp GRAVE  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans  &trans            &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans            &trans             &trans  &trans  &kp BACKSLASH     &trans  &trans     &trans  &trans  &trans  &trans
+                                             &trans  &trans  &trans            &trans  &trans     &trans
             >;
         };
 
