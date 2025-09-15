@@ -281,25 +281,31 @@
         page_up {
             bindings = <&kp PAGE_UP>;
             key-positions = <7 9>;
-            layers = <0 5>;
+            layers = <0 5 7>;
         };
 
         page_down {
             bindings = <&kp PAGE_DOWN>;
             key-positions = <33 31>;
-            layers = <0 5>;
+            layers = <0 5 7>;
         };
 
         home {
             bindings = <&kp HOME>;
             key-positions = <7 8 9>;
-            layers = <0 5>;
+            layers = <0 5 7>;
         };
 
         end {
             bindings = <&kp END>;
             key-positions = <31 32 33>;
-            layers = <0 5>;
+            layers = <0 5 7>;
+        };
+
+        not_equal {
+            bindings = <&not_equal>;
+            key-positions = <26 27>;
+            layers = <4>;
         };
     };
 
@@ -328,6 +334,13 @@
                 <&kp RETURN>;
 
             label = "MENU_HELP";
+        };
+
+        not_equal: not_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCLAMATION &kp EQUAL>;
+            label = "NOT_EQUAL";
         };
     };
 
@@ -376,7 +389,7 @@
         characters {
             display-name = "SYM";
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT        &kp CARET  &kp AMPS   &kp ASTERISK   &kp BACKSLASH  &kp PIPE          &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT        &kp CARET  &kp AMPS   &kp ASTERISK   &kp BACKSLASH  &kp EQUAL         &trans
 &trans  &kp N1           &kp N2       &kp N3     &kp N4      &kp N5             &kp N6     &kp N7     &kp N8         &kp N9         &kp N0            &trans
 &trans  &kp UNDER        &kp EQUAL    &kp PLUS   &kp MINUS   &kp DOUBLE_QUOTES  &kp GRAVE  &kp TILDE  &kp LESS_THAN  &kp PERIOD     &kp GREATER_THAN  &trans
                                       &trans     &trans      &trans             &trans     &trans     &trans
@@ -386,19 +399,19 @@
         controls {
             display-name = "CTL";
             bindings = <
-&trans  &trans         &kp C_PREVIOUS     &kp C_NEXT       &kp C_PP    &trans                &kp LG(LEFT_BRACKET)  &kp PG_UP      &trans        &kp LG(RIGHT_BRACKET)  &kp HOME    &trans
-&trans  &kp LSHFT      &kp LCTRL          &kp LALT         &kp LGUI    &kp C_BRIGHTNESS_INC  &kp LEFT              &kp DOWN       &kp UP_ARROW  &kp RIGHT              &kp END     &trans
-&trans  &kp BACKSPACE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &trans                &kp PAGE_DOWN  &dw_dl        &kp BACKSPACE          &kp DELETE  &trans
-                                          &trans           &trans      &trans                &trans                &trans         &trans
+&trans  &trans         &kp C_PREVIOUS     &kp C_NEXT       &kp C_PP    &trans                &kp LG(LEFT_BRACKET)  &trans             &trans         &kp LG(RIGHT_BRACKET)  &trans  &trans
+&trans  &kp LSHFT      &kp LCTRL          &kp LALT         &kp LGUI    &kp C_BRIGHTNESS_INC  &kp LEFT              &kp DOWN           &kp UP_ARROW   &kp RIGHT              &trans  &trans
+&trans  &kp BACKSPACE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &kp LG(BACKSPACE)     &kp LA(BACKSPACE)  &kp BACKSPACE  &kp DELETE             &trans  &trans
+                                          &trans           &trans      &trans                &trans                &trans             &trans
             >;
         };
 
         function {
             bindings = <
-&trans  &kp F1  &kp F2     &kp F3                &kp F4                 &kp F5      &kp F6    &kp F7            &kp F8             &kp F9     &kp F10  &trans
-&trans  &trans  &kp SPACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &nswin      &sc_part  &kp LESS_THAN     &kp GREATER_THAN   &kp SPACE  &kp F11  &trans
-&trans  &trans  &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &menu_help  &sc_full  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &kp F12  &trans
-                           &trans                &trans                 &trans      &trans    &trans            &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &trans  &trans  &trans  &nswin      &sc_part  &trans  &trans  &trans  &kp F11  &trans
+&trans  &trans  &trans  &trans  &trans  &menu_help  &sc_full  &trans  &trans  &trans  &kp F12  &trans
+                        &trans  &trans  &trans      &trans    &trans  &trans
             >;
 
             label = "FCN";
@@ -407,9 +420,9 @@
         mouse {
             display-name = "MS";
             bindings = <
-&trans  &trans  &trans     &trans    &trans    &trans  &sc_up_left     &kp PAGE_UP     &mmv MOVE_UP    &kp PAGE_DOWN    &kp HOME  &trans
-&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &sc_down_right  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp END   &trans
-&trans  &trans  &trans     &trans    &trans    &trans  &trans          &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans    &trans
+&trans  &trans  &trans     &trans    &trans    &trans  &sc_up_left     &trans          &mmv MOVE_UP    &trans           &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &sc_down_right  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans     &trans    &trans    &trans  &trans          &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
                            &trans    &trans    &trans  &mkp LCLK       &mkp MCLK       &mkp RCLK
             >;
         };
