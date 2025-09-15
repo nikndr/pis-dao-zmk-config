@@ -421,7 +421,11 @@
         gm: gm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(L) &kp J &kp COMMA &kp H &kp J &kp U &kp J &kp SPACE &kp H &kp F &kp Y &kp R &kp E &kp EXCL>;
+            bindings =
+                <&kp LS(L) &kp J &kp COMMA &kp H &kp J &kp U &kp J &kp SPACE &kp H &kp F &kp Y &kp R &kp E &kp EXCL>,
+                <&macro_wait_time 80>,
+                <&kp RETURN>;
+
             label = "GM";
         };
     };
