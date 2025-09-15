@@ -277,6 +277,30 @@
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <32 33>;
         };
+
+        page_up {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <7 9>;
+            layers = <0 5>;
+        };
+
+        page_down {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <33 31>;
+            layers = <0 5>;
+        };
+
+        home {
+            bindings = <&kp HOME>;
+            key-positions = <7 8 9>;
+            layers = <0 5>;
+        };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <31 32 33>;
+            layers = <0 5>;
+        };
     };
 
     macros {
