@@ -113,24 +113,6 @@
             bindings = <&kp LC(LA(LEFT_SHIFT))>, <&kp LC(LA(LG(LEFT_SHIFT)))>;
         };
 
-        sc_up_left: sc_up_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SC_UP_LEFT";
-            bindings = <&msc SCRL_UP>, <&msc SCRL_LEFT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        sc_down_right: sc_down_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SC_DOWN_RIGHT";
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_RIGHT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
         ltr: ltr {
             compatible = "zmk,behavior-hold-tap";
             label = "LTR";
