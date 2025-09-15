@@ -236,6 +236,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        gml_eml: gml_eml {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GML_EML";
+            #binding-cells = <0>;
+            bindings = <&gml>, <&eml>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     combos {
@@ -342,6 +351,8 @@
             bindings = <&not_equal>;
             key-positions = <26 27>;
             layers = <4>;
+            require-prior-idle-ms = <120>;
+            timeout-ms = <40>;
         };
     };
 
@@ -377,6 +388,41 @@
             #binding-cells = <0>;
             bindings = <&kp EXCLAMATION &kp EQUAL>;
             label = "NOT_EQUAL";
+        };
+
+        gml: gml_eml {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp A &kp R &kp G &kp A &kp L &kp DOT &kp N &kp I &kp K &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "GML_EML";
+        };
+
+        eml: eml {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp I &kp K &kp A &kp N &kp D &kp R &kp DOT &kp M &kp A &kp R &kp H &kp A &kp L &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "EML";
+        };
+
+        dhml: dhml {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp I &kp K &kp A &kp N &kp D &kp R &kp AT &kp D &kp R &kp O &kp N &kp E &kp H &kp A &kp R &kp M &kp O &kp N &kp Y &kp DOT &kp C &kp O &kp M>;
+            label = "DHML";
+        };
+
+        rugml: rugml {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N &kp DOT &kp M &kp A &kp R &kp H &kp A &kp L &kp AT &kp S &kp T &kp U &kp D &kp E &kp N &kp T &kp DOT &kp R &kp U &kp G &kp DOT &kp N &kp L>;
+            label = "RUGML";
+        };
+
+        gm: gm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(L) &kp J &kp COMMA &kp H &kp J &kp U &kp J &kp SPACE &kp H &kp F &kp Y &kp R &kp E &kp EXCL>;
+            label = "GM";
         };
     };
 
@@ -444,10 +490,10 @@
 
         function {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &trans  &trans  &trans  &nswin      &sc_part  &trans  &trans  &trans  &kp F11  &trans
-&trans  &trans  &trans  &trans  &trans  &menu_help  &sc_full  &trans  &trans  &trans  &kp F12  &trans
-                        &trans  &trans  &trans      &trans    &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp F6    &kp F7    &kp F8  &kp F9  &kp F10  &trans
+&trans  &gm     &trans  &trans  &trans  &nswin      &sc_part  &gml_eml  &rugml  &dhml   &kp F11  &trans
+&trans  &trans  &trans  &trans  &trans  &menu_help  &sc_full  &trans    &trans  &trans  &kp F12  &trans
+                        &trans  &trans  &trans      &trans    &trans    &trans
             >;
 
             label = "FCN";
