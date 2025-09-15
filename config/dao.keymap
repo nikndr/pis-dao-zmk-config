@@ -106,15 +106,6 @@
             bindings = <&kp LG(LA(LS(N0)))>, <&kp LG(LA(LS(NUMBER_1)))>;
         };
 
-        sk_sft: sk_sft {
-            compatible = "zmk,behavior-sticky-key";
-            label = "SK_SFT";
-            bindings = <&kp>;
-            #binding-cells = <1>;
-            release-after-ms = <450>;
-            quick-release;
-        };
-
         meh_hyper: meh_hyper {
             compatible = "zmk,behavior-tap-dance";
             label = "MEH_HYPER";
@@ -192,15 +183,6 @@
             hold-trigger-on-release;
         };
 
-        dw_dl: dw_dl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DW_DL";
-            bindings = <&kp LA(BACKSPACE)>, <&kp LG(BACKSPACE)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
         cb_b_l: cb_b_l {
             compatible = "zmk,behavior-mod-morph";
             label = "CB_B_L";
@@ -235,15 +217,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-        };
-
-        gml_eml: gml_eml {
-            compatible = "zmk,behavior-tap-dance";
-            label = "GML_EML";
-            #binding-cells = <0>;
-            bindings = <&gml>, <&eml>;
-
-            tapping-term-ms = <150>;
         };
     };
 
