@@ -200,6 +200,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        per_col: per_col {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PER_COL";
+            #binding-cells = <0>;
+            bindings = <&kp KP_DOT>, <&kp COLON>;
+        };
     };
 
     combos {
@@ -393,9 +400,9 @@
             display-name = "NUM";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_PLUS   &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp KP_EQUAL  &kp N4  &kp N5  &kp N6  &kp KP_DOT       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp KP_EQUAL  &kp N4  &kp N5  &kp N6  &kp KP_DOT       &kp COLON
 &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_MINUS  &kp N1  &kp N2  &kp N3  &kp KP_DIVIDE    &trans
-                        &trans  &trans  &trans  &kp N0        &kp N0  &trans
+                        &trans  &trans  &trans  &kp SPACE     &kp N0  &trans
             >;
         };
 
@@ -412,7 +419,7 @@
         controls {
             display-name = "CTL";
             bindings = <
-&trans  &trans         &kp C_PREVIOUS     &kp C_NEXT       &kp C_PP    &trans                &kp LG(LEFT_BRACKET)  &trans             &trans         &kp LG(RIGHT_BRACKET)  &trans  &trans
+&trans  &trans         &kp C_PREVIOUS     &kp C_NEXT       &kp C_PP    &mo 3                 &kp LG(LEFT_BRACKET)  &trans             &trans         &kp LG(RIGHT_BRACKET)  &trans  &trans
 &trans  &kp LSHFT      &kp LCTRL          &kp LALT         &kp LGUI    &kp C_BRIGHTNESS_INC  &kp LEFT              &kp DOWN           &kp UP_ARROW   &kp RIGHT              &trans  &trans
 &trans  &kp BACKSPACE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &kp LG(BACKSPACE)     &kp LA(BACKSPACE)  &kp BACKSPACE  &kp DELETE             &trans  &trans
                                           &trans           &trans      &trans                &trans                &trans             &trans
