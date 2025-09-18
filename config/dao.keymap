@@ -221,7 +221,7 @@
             key-positions = <14 15>; // sd
             layers = <0 8>;
             timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <100>;
         };
 
         combo_return {
@@ -229,10 +229,10 @@
             key-positions = <20 21>;
             timeout-ms = <40>;
             layers = <0 8>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <100>;
         };
 
-        combo_equals {
+        combo_tab {
             bindings = <&kp TAB>;
             key-positions = <27 26>;
             layers = <0>;
@@ -273,11 +273,6 @@
             layers = <0>;
         };
 
-        quote {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <32 33>;
-        };
-
         page_up {
             bindings = <&kp PAGE_UP>;
             key-positions = <7 9>;
@@ -286,7 +281,7 @@
 
         page_down {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <33 31>;
+            key-positions = <31 33>;
             layers = <0 5 7>;
         };
 
@@ -308,6 +303,22 @@
             layers = <4>;
             require-prior-idle-ms = <120>;
             timeout-ms = <40>;
+        };
+
+        combo_tab_r {
+            bindings = <&kp TAB>;
+            key-positions = <32 33>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        combo_grave_r {
+            bindings = <&kp GRAVE>;
+            key-positions = <31 32>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
         };
     };
 
