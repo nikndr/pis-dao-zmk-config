@@ -335,6 +335,11 @@
             require-prior-idle-ms = <120>;
             layers = <4>;
         };
+
+        context_menu {
+            bindings = <&kp LC(ENTER)>;
+            key-positions = <13 16>;
+        };
     };
 
     macros {
