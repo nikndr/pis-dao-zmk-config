@@ -500,11 +500,6 @@
             if-layers = <4 5>;
             then-layer = <6>;
         };
-
-        brackets {
-            if-layers = <4 2>;
-            then-layer = <2>;
-        };
     };
 };
 
