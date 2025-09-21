@@ -348,7 +348,7 @@
 
         context_menu {
             bindings = <&kp LC(ENTER)>;
-            key-positions = <13 16>;
+            key-positions = <26 28>;
         };
     };
 
