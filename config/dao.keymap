@@ -268,6 +268,8 @@
         combo_1password {
             bindings = <&kp LG(LS(SPACE))>;
             key-positions = <14 16>;
+            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
         };
 
         go_gayming {
@@ -292,13 +294,13 @@
 
         page_up {
             bindings = <&kp PAGE_UP>;
-            key-positions = <7 9>;
+            key-positions = <9 8>;
             layers = <0 5 7>;
         };
 
         page_down {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <31 33>;
+            key-positions = <33 32>;
             layers = <0 5 7>;
         };
 
@@ -322,38 +324,18 @@
             timeout-ms = <40>;
         };
 
-        combo_tab_r {
-            bindings = <&kp TAB>;
-            key-positions = <32 33>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-
-        combo_grave_r {
-            bindings = <&kp GRAVE>;
-            key-positions = <31 32>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
-
-        combo_arrow {
-            bindings = <&arrow>;
-            key-positions = <27 28>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <120>;
-            layers = <4>;
-        };
-
         context_menu {
             bindings = <&kp LC(ENTER)>;
             key-positions = <26 28>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
         };
 
         caps_word {
             bindings = <&caps_word>;
-            key-positions = <29 37>;
+            key-positions = <37 40>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <120>;
         };
     };
 
@@ -396,6 +378,14 @@
             #binding-cells = <0>;
             bindings = <&kp MINUS &kp GREATER_THAN>;
             label = "ARROW";
+        };
+
+        find_file: find_file {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(F1)>, <&macro_wait_time 80>, <&kp NUMBER_1>;
+
+            label = "FIND_FILE";
         };
     };
 
@@ -463,10 +453,10 @@
 
         function {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &trans  &trans  &trans  &nswin      &sc_part  &trans  &trans  &trans  &kp F11  &trans
-&trans  &trans  &trans  &trans  &trans  &menu_help  &sc_full  &trans  &trans  &trans  &kp F12  &trans
-                        &trans  &trans  &trans      &trans    &trans  &trans
+&trans  &kp F1      &kp F2  &kp F3  &kp F4  &kp F5      &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &find_file  &trans  &trans  &trans  &nswin      &sc_part  &trans  &trans  &trans  &kp F11  &trans
+&trans  &trans      &trans  &trans  &trans  &menu_help  &sc_full  &trans  &trans  &trans  &kp F12  &trans
+                            &trans  &trans  &trans      &trans    &trans  &trans
             >;
 
             label = "FCN";
