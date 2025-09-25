@@ -35,7 +35,7 @@
     quick-release;
 };
 
-&caps_word { continue-list = <UNDERSCORE MINUS>; };
+&caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>; };
 
 &mmv {
     time-to-max-speed-ms = <600>;
@@ -349,6 +349,11 @@
         context_menu {
             bindings = <&kp LC(ENTER)>;
             key-positions = <26 28>;
+        };
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <29 37>;
         };
     };
 
