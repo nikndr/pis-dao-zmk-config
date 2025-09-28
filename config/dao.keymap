@@ -165,49 +165,6 @@
             hold-trigger-on-release;
         };
 
-        cb_b_l: cb_b_l {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CB_B_L";
-            bindings = <&kp LEFT_BRACE>, <&kp LEFT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        cb_b_r: cb_b_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CB_B_R";
-            bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_BRACKET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        b_lt_l: b_lt_l {
-            compatible = "zmk,behavior-mod-morph";
-            label = "B_LT_L";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        b_lt_r: b_lt_r {
-            compatible = "zmk,behavior-mod-morph";
-            label = "B_LT_R";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        per_col: per_col {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PER_COL";
-            #binding-cells = <0>;
-            bindings = <&kp KP_DOT>, <&kp COLON>;
-        };
-
         appsw: appsw {
             compatible = "zmk,behavior-hold-tap";
             label = "APPSW";
@@ -410,10 +367,10 @@
         base {
             display-name = "BASE";
             bindings = <
-&kp LC(ENTER)  &kp Q              &kp W                &kp E            &kp R             &kp T        &kp Y      &kp U             &kp I                       &kp O                &kp P                 &kp SQT
-&b_lt_l        &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F  &kp G        &kp H      &hmr LEFT_META J  &hmr LEFT_ALT K             &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &b_lt_r
-&cb_b_l        &lt 6 Z            &kp X                &kp C            &kp V             &kp B        &kp N      &kp M             &kp COMMA                   &kp DOT              &kp FSLH              &cb_b_r
-                                                       &meh_hyper       &sk LEFT_SHIFT    &lt 4 SPACE  &sym_symn  &mo 1             &appsw GLOBE LA(LC(SPACE))
+&kp LC(ENTER)         &kp Q              &kp W                &kp E            &kp R             &kp T        &kp Y      &kp U             &kp I                       &kp O                &kp P                 &kp SQT
+&kp LEFT_PARENTHESIS  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F  &kp G        &kp H      &hmr LEFT_META J  &hmr LEFT_ALT K             &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp RIGHT_PARENTHESIS
+&kp LEFT_BRACE        &lt 6 Z            &kp X                &kp C            &kp V             &kp B        &kp N      &kp M             &kp COMMA                   &kp DOT              &kp FSLH              &kp RIGHT_BRACE
+                                                              &meh_hyper       &sk LEFT_SHIFT    &lt 4 SPACE  &sym_symn  &mo 1             &appsw GLOBE LA(LC(SPACE))
             >;
         };
 
