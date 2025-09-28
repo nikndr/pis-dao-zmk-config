@@ -132,21 +132,21 @@
             label = "LYR_DEBUG";
             #binding-cells = <0>;
             bindings =
-                <&mo 3>,
                 <&mo 2>,
+                <&mo 0>,
+                <&mo 4>,
                 <&mo 5>,
                 <&mo 6>,
                 <&mo 7>,
                 <&mo 8>,
-                <&mo 9>,
-                <&mo 10>;
+                <&mo 9>;
         };
 
         sym_symn: sym_symn {
             compatible = "zmk,behavior-tap-dance";
             label = "SYM_SYMN";
             #binding-cells = <0>;
-            bindings = <&mo 3>, <&mo 4>;
+            bindings = <&mo 2>, <&mo 3>;
 
             tapping-term-ms = <150>;
         };
@@ -230,20 +230,20 @@
         compatible = "zmk,combos";
 
         hardware_left {
-            bindings = <&to 10>;
+            bindings = <&to 9>;
             key-positions = <5 17 29 37>; // t g b keys
             layers = <0>;
         };
 
         hardware_right {
-            bindings = <&to 10>;
+            bindings = <&to 9>;
             key-positions = <6 18 30 40>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <14 15>; // sd
-            layers = <0 8>;
+            layers = <0 7>;
             timeout-ms = <40>;
             require-prior-idle-ms = <100>;
         };
@@ -252,7 +252,7 @@
             bindings = <&kp RETURN>;
             key-positions = <20 21>;
             timeout-ms = <40>;
-            layers = <0 8>;
+            layers = <0 7>;
             require-prior-idle-ms = <100>;
         };
 
@@ -269,7 +269,7 @@
             key-positions = <21 19>;
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
-            layers = <0 8>;
+            layers = <0 7>;
         };
 
         combo_1password {
@@ -280,7 +280,7 @@
         };
 
         go_gayming {
-            bindings = <&to 8>;
+            bindings = <&to 7>;
             key-positions = <1 2 3 4>;
             layers = <0>;
         };
@@ -288,7 +288,7 @@
         quit_gayming {
             bindings = <&to 0>;
             key-positions = <7 8 9 10>;
-            layers = <8>;
+            layers = <7>;
         };
 
         combo_grave {
@@ -302,7 +302,7 @@
         page_up {
             bindings = <&kp PAGE_UP>;
             key-positions = <9 8>;
-            layers = <0 5 7>;
+            layers = <0 4 6>;
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
         };
@@ -310,7 +310,7 @@
         page_down {
             bindings = <&kp PAGE_DOWN>;
             key-positions = <33 32>;
-            layers = <0 5 7>;
+            layers = <0 4 6>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
         };
@@ -318,7 +318,7 @@
         home {
             bindings = <&kp HOME>;
             key-positions = <9 7>;
-            layers = <0 5 7>;
+            layers = <0 4 6>;
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
         };
@@ -326,7 +326,7 @@
         end {
             bindings = <&kp END>;
             key-positions = <33 31>;
-            layers = <0 5 7>;
+            layers = <0 4 6>;
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
         };
@@ -334,7 +334,7 @@
         not_equal {
             bindings = <&not_equal>;
             key-positions = <26 27>;
-            layers = <3>;
+            layers = <2>;
             require-prior-idle-ms = <120>;
             timeout-ms = <40>;
         };
@@ -412,8 +412,8 @@
             bindings = <
 &kp LC(ENTER)  &kp Q              &kp W                &kp E            &kp R             &kp T        &kp Y      &kp U             &kp I                       &kp O                &kp P                 &kp SQT
 &b_lt_l        &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F  &kp G        &kp H      &hmr LEFT_META J  &hmr LEFT_ALT K             &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &b_lt_r
-&cb_b_l        &lt 7 Z            &kp X                &kp C            &kp V             &kp B        &kp N      &ltr 2 M          &kp COMMA                   &kp DOT              &kp FSLH              &cb_b_r
-                                                       &meh_hyper       &sk LEFT_SHIFT    &lt 5 SPACE  &sym_symn  &mo 1             &appsw GLOBE LA(LC(SPACE))
+&cb_b_l        &lt 6 Z            &kp X                &kp C            &kp V             &kp B        &kp N      &kp M             &kp COMMA                   &kp DOT              &kp FSLH              &cb_b_r
+                                                       &meh_hyper       &sk LEFT_SHIFT    &lt 4 SPACE  &sym_symn  &mo 1             &appsw GLOBE LA(LC(SPACE))
             >;
         };
 
@@ -423,16 +423,6 @@
 &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &trans  &trans            &trans  &trans     &trans  &trans  &trans  &trans
 &trans  &trans            &trans             &trans  &trans  &kp BACKSLASH     &trans  &trans     &trans  &trans  &trans  &trans
                                              &trans  &trans  &trans            &trans  &trans     &trans
-            >;
-        };
-
-        brackets {
-            display-name = "BRK";
-            bindings = <
-&trans  &trans  &trans         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans            &trans  &trans  &trans  &trans  &trans  &trans
-                               &trans                &trans                 &trans            &trans  &trans  &trans
             >;
         };
 
@@ -493,7 +483,7 @@
 &kp GRAVE       &kp Q                &kp W            &kp E         &kp R             &kp T        &kp Y   &kp U            &kp I        &kp O                &kp P                 &kp LBKT
 &kp TAB         &kp A                &kp S            &kp D         &kp F             &kp G        &kp H   &hmr LEFT_GUI J  &hmr LALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &kp SQT
 &kp LEFT_SHIFT  &hml LEFT_CONTROL Z  &hml LEFT_ALT X  &kp C         &kp V             &kp B        &kp N   &kp M            &kp COMMA    &kp DOT              &kp FSLH              &kp LC(SPACE)
-                                                      &kp LEFT_ALT  &kp LEFT_CONTROL  &lt 9 SPACE  &trans  &kp BACKSPACE    &kp GLOBE
+                                                      &kp LEFT_ALT  &kp LEFT_CONTROL  &lt 8 SPACE  &trans  &kp BACKSPACE    &kp GLOBE
             >;
         };
 
@@ -522,8 +512,8 @@
         compatible = "zmk,conditional-layers";
 
         function_layer {
-            if-layers = <3 5>;
-            then-layer = <6>;
+            if-layers = <2 4>;
+            then-layer = <5>;
         };
     };
 };
