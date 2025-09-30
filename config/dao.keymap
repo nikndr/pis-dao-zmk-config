@@ -181,6 +181,15 @@
             #binding-cells = <0>;
             bindings = <&arrow>, <&not_equal>;
         };
+
+        lt_tog: lt_tog {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TOGGLE";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&to>;
+        };
     };
 
     combos {
