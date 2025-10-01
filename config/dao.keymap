@@ -496,7 +496,7 @@
         compatible = "zmk,conditional-layers";
 
         function_layer {
-            if-layers = <6 2>;
+            if-layers = <1 2>;
             then-layer = <3>;
         };
     };
