@@ -277,7 +277,7 @@
 
         page_up {
             bindings = <&kp PAGE_UP>;
-            key-positions = <9 8>;
+            key-positions = <9 7>;
             layers = <0 2 2>;
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
@@ -285,7 +285,7 @@
 
         page_down {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <33 32>;
+            key-positions = <33 31>;
             layers = <0 2 2>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
@@ -329,12 +329,11 @@
             require-prior-idle-ms = <120>;
         };
 
-        to_base {
-            bindings = <&to 0>;
-            key-positions = <14 15>;
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <19 20>;
+            require-prior-idle-ms = <150>;
             timeout-ms = <40>;
-            require-prior-idle-ms = <100>;
-            layers = <8>;
         };
     };
 
