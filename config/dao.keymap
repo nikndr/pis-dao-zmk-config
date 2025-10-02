@@ -172,7 +172,7 @@
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_LCTL)>;
         };
     };
 
