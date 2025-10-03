@@ -203,7 +203,6 @@
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <14 15>; // sd
-            layers = <0 7>;
             timeout-ms = <40>;
             require-prior-idle-ms = <100>;
         };
@@ -212,14 +211,12 @@
             bindings = <&kp RETURN>;
             key-positions = <20 21>;
             timeout-ms = <40>;
-            layers = <0 7>;
             require-prior-idle-ms = <100>;
         };
 
         combo_tab {
             bindings = <&kp TAB>;
             key-positions = <27 26>;
-            layers = <0>;
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
         };
