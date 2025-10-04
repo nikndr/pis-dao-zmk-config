@@ -372,10 +372,10 @@
         controls {
             display-name = "CTL";
             bindings = <
-&trans  &trans         &kp C_PREVIOUS     &kp C_PP         &kp C_NEXT  &trans                &kp LG(LEFT_BRACKET)  &trans             &trans         &kp LG(RIGHT_BRACKET)  &trans  &trans
-&trans  &kp LSHFT      &kp LCTRL          &kp LALT         &kp LGUI    &kp C_BRIGHTNESS_INC  &kp LEFT              &kp DOWN           &kp UP_ARROW   &kp RIGHT              &trans  &trans
-&trans  &kp BACKSPACE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &kp LG(BACKSPACE)     &kp LA(BACKSPACE)  &kp BACKSPACE  &caps_word             &trans  &trans
-                                          &to 0            &trans      &trans                &trans                &trans             &trans
+&trans  &trans      &kp C_PREVIOUS     &kp C_PP         &kp C_NEXT  &trans                &kp LG(LEFT_BRACKET)  &trans             &trans         &kp LG(RIGHT_BRACKET)  &trans  &trans
+&trans  &kp LSHFT   &kp LCTRL          &kp LALT         &kp LGUI    &kp C_BRIGHTNESS_INC  &kp LEFT              &kp DOWN           &kp UP_ARROW   &kp RIGHT              &trans  &trans
+&trans  &kp DELETE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp C_BRIGHTNESS_DEC  &kp LG(BACKSPACE)     &kp LA(BACKSPACE)  &kp BACKSPACE  &trans                 &trans  &trans
+                                       &to 0            &trans      &trans                &trans                &caps_word         &trans
             >;
         };
 
